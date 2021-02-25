@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El título de mi web</title>
+    <title>Cheatsheet</title>
 </head>
+
 <body>
 
     <!-- Enlaces internos y externos -->
@@ -14,12 +16,11 @@
 
     <!-- Espacio en Blanco -->
     <br>
-    <a href="folder/blog.html">Blog</a>
-
 
     <!-- Línea separadora -->
     <hr>
-    <a href="folder/blog.html">Blog</a>
+
+
 
     <!-- Headings -->
     <h1>Título 1</h1>
@@ -28,10 +29,234 @@
     <h4>Título 4</h4>
     <h5>Título 5</h5>
     <h6>Título 6</h6>
-    
     <hr>
-    
+
+
+
     <!-- Paragraphs -->
+    <p>
+        Lorem ipsum <b>sit amet consectetur</b> adipisicing elit. Magnam iste nisi nam asperiores aliquid consectetur
+        culpa <s>totam</s>, dignissimos rem eveniet quas dicta consequuntur aut et necessitatibus nobis labore ad
+        dolorum
+        <strong>libero <span id="anchor">molestiae</span> reiciendis commodi.</strong> Ad debitis fugiat eaque et, nobis
+        laudantium corrupti repudiandae modi
+        cumque <em>consectetur exercitationem</em> dicta!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam doloribus at sequi minima omnis? Sit eum
+        fugiat itaque placeat fugit H<sub>10</sub>. Coca-Cola<sup>R</sup>
+    </p>
+
+    <!-- <b> solo capta la atención visualmente, <strong> en cambio tiene connotaciones
+    para los motores de búsqueda y la accesibilidad-->
+
+    <!-- <s> tacha texto-->
+
+    <!-- <em> pone el texto en cursiva, solo visual-->
+
+    <!-- <span> no significa nada, pero es útil para asignar
+    id's, classes o aislar texto para diferenciarlo del párrafo -->
+
+
+    <pre> <!-- Mantiene el formato del párrafo-->
+        Lorem ipsum <b>sit amet consectetur</b> adipisicing elit. Magnam iste nisi nam asperiores aliquid consectetur
+            culpa magni totam, 
+        
+        dignissimos rem eveniet quas dicta consequuntur aut et necessitatibus nobis labore ad dolorum
+        <strong>libero molestiae reiciendis commodi.</strong> Ad debitis fugiat eaque et, nobis laudantium corrupti repudiandae modi
+                cumque perferendis consectetur exercitationem dicta!
+    </pre>
+
+
+    <p>El teorema de Pitágoras establece que, en todo triángulo rectángulo, la longitud de la hipotenusa es igual a la
+        raíz cuadrada de la suma del área de los cuadrados de las respectivas longitudes de los catetos.</p>
+    <p><var>a</var><sup>2</sup> + <var>b</var><sup>2</sup> = <var>C</var><sup>2</sup></p>
+    <!-- <var> sirve para representar variables en fórmulas matemáticas -->
+
+    <p>Las clases del bootcamp empiezan a las <time datetime="09:30">09:30</time></p>
+    <p>El primer día fue el <time datetime="2021-02-01">la primera vez que nos vimos</time></p>
+    <!-- la parte del atributo "datetime" sirve para programación, muy útil para JS -->
+
+    <br><hr><br>
+
+
+
+    <!-- Contenedores / Containers -->
+
+    <!-- shortcut -> nav.mi-nav>a*3{enlace $} -->
+    <nav class="mi-nav">
+        <a href="">Enlace 1</a>
+        <a href="">Enlace 2</a>
+        <a href="">Enlace 3</a>
+    </nav>
+
+    <!-- <nav>Suele usarse para la barra de navegación superior de una web. Es semántica -->
+
+    <section>
+        <article>
+            <h1>Título del artículo</h1>
+            <p>Contenido del artículo: Estructura usada generalmente para blogs</p>
+        </article>
+        <a href="">Leer más</a>
+    </section>
+
+    <aside>
+        <p>Menú generalmente lateral</p>
+    </aside>
+
+    <footer>
+        <p>Se usa para pie de páginas</p>
+        <address>
+            Málaga, 29007
+        </address>
+    </footer>
+
+
+    <div>
+        Es el contenedor genérico para agrupar elementos y el que más se utiliza.
+        <b>¡Si escribes directamente una clase, emmet la creará con esta etiqueta!</b>
+    </div>
+
+    <br><hr><br>
+
+    <!-- Listas -->
+
+    <ul> <!-- lista desordendada -->
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+        <li>Elemento 5</li>
+    </ul>
+
+    <ol> <!-- lista desordendada -->
+        <li>Elemento</li>
+        <li>Elemento padre
+            <ol>
+                <li>Subelemento</li>
+                <li>Subelemento</li>
+            </ol>
+        </li>
+        <li>Elemento</li>
+        <li>Elemento</li>
+        <li>Elemento</li>
+    </ol>
+
+    <ol start="500"> <!-- lista desordendada -->
+        <li>Elemento</li>
+        <li>Elemento</li>
+        <li>Elemento</li>
+        <li>Elemento</li>
+        <li>Elemento</li>
+    </ol>
+
+    <br><hr><br>
+
+    <!-- Tablas -->
+
+    <table>
+        <thead>
+            <tr>
+                <th>Cabecera 1</th>
+                <th>Cabecera 2</th>
+                <th>Cabecera 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Elemento 1-1</td>
+                <td>elemento 1-2</td>
+                <td>elemento 1-3</td>
+            </tr>
+            <tr>
+                <td>Elemento 2-1</td>
+                <td>Elemento 2-2</td>
+                <td>Elemento 2-3</td>
+            </tr>
+            <tr>
+                <td>Elemento 3-1</td>
+                <td>Elemento 3-2</td>
+                <td>Elemento 3-3</td>
+            </tr>
+            <tr>
+                <td>Elemento 4-1</td>
+                <td></td>
+                <td>Elemento 4-3</td>
+            </tr>
+            <tr>
+                <td>Elemento 5-1</td>
+                <td>Elemento 5-2</td>
+                <td>Elemento 5-3</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Pie de tabla 1</th>
+                <th>Pie de tabla 2</th>
+                <th>Pie de tabla 3</th>
+            </tr>
+        </tfoot>
+
+    </table>
+
+    <br><hr><br>
+
+
+    <!-- Formularios / Forms -->
+
+    <form action="#" method="get">
+       
+        <div class="inputblock">
+            <label for="nameInput">Nombre:</label><br> <!-- En for ponemos lo que va en id -->
+            <input type="text" id="nameInput" name="userName" placeholder="Introduce tu nombre">
+            <!-- Lo que va en "name" llega al servidor como nombre de la variable -->
+        </div><br>
+        
+        <div class="inputblock">
+            <label for="apellido">Apellido:</label><br> 
+            <input type="text" id="apellido" name="userLastname" placeholder="Introduce tu apellido">
+        </div><br>
+
+        <div class="inputblock">
+            <label for="email">Email:</label><br> 
+            <input type="email" id="email" name="userEmail" placeholder="Introduce tu email">
+        </div><br>
+
+        <div class="inputblock">
+            <label for="passwordInput">Contraseña:</label><br> 
+            <input  maxlength="5" type="password" id="passwordInput" name="userEmail" placeholder="Introduce tu contraseña">
+        </div><br>
+
+        <div class="inputblock">
+            <label for="messageInput">Mensaje:</label><br> 
+            <textarea name="messageInput" id="messageInput" cols="30" rows="10" placeholder="Introduce tu mensaje"></textarea>
+        </div><br>
+
+        <div class="inputblock">
+            <label for="genreInput">Género:(*)</label><br>
+            <select required name="genreInput" id="genreInput">
+                <option value="" hidden></option>
+                <option value="female" disabled>Femenino</option>
+                <option value="male">Masculino</option>
+                <option value="other">Otro</option>
+            </select>
+        </div>
+        <br><br>
+
+        <div>
+            <label for="ageInput">Edad</label><br>
+            <input type="number" name="number" id="ageInput" min="0" max="120" placeholder="Edad">
+        </div>
+
+        <input type="date">
+
+        <br><br>
+        <input type="submit" value="Guardar">
+
+    </form>
+
+
+
+
 
 </body>
-</html> 
+
+</html>
