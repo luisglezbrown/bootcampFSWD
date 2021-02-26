@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2: Formularios</title>
+</head>
+<body>
+    <h1>Formulario de registro</h1>
+
+    <fieldset>
+        <legend>Información personal</legend>
+
+        <div>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" placeholder="Elon">
+            <label for="surname">Apellido:</label>
+            <input type="text" id="surname" name="surname" placeholder="Musk">
+        </div><br>
+
+        <div>
+            <label for="age">Edad:</label>
+            <input type="number" id="age" name="age" value="40">
+        </div><br>
+
+        <div>
+            <label for="email">Edad:</label>
+            <input type="email" id="email" name="email" placeholder="nombre@email.com">
+        </div><br>
+
+        <div>
+            <label for="password">Email:</label>
+            <input type="password" id="password" name="password" placeholder="******">
+        </div><br>
+
+        <fieldset>
+            <legend>Género</legend>
+            
+            <input type="radio" name="genre" id="female">
+            <label for="female">Mujer</label><br>
+
+            <input type="radio" name="genre" id="male">
+            <label for="male">Hombre</label><br>
+
+            <input type="radio" name="genre" id="other">
+            <label for="other">Otro</label><br>         
+        </fieldset><br>
+
+        <div>
+            <label for="country">País</label>
+            <input type="text" id="name" name="country" placeholder="Introduce tu país">
+        </div><br>
+
+        <div>
+            <label for="lang">Lenguaje de programación:</label>
+            <select required name="lang" id="lang">
+                <option value="js">Javascript</option>
+                <option value="node">Node</option>
+                <option value="c">C</option>
+            </select>
+        </div><br>
+
+        <fieldset disabled>
+            <legend>Selecciona tu academia de programación favorita:</legend>
+            
+            <input type="radio" name="academy" id="codespace" checked>
+            <label for="codespace">Code Space Academy</label><br>
+
+            <input type="radio" name="academy" id="Ac2">
+            <label for="Ac2">Academia 2</label><br>
+
+            <input type="radio" name="academy" id="Ac3">
+            <label for="Ac3">Academia 3</label><br>         
+        </fieldset><br>
+    </fieldset><br>
+
+    <div>
+        <input type="checkbox" name="newsletter" id="newsletter">
+        <label for="newsletter">Acepto recibir cientos de miles de corres irrelevantes.</label>
+    </div>
+
+    <div>
+        <input type="checkbox" name="generalterms" id="generalterms">
+        <label for="generalterms">Acepto los términos y condiciones.</label>
+    </div>
+
+    <br>
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Vaciar formulario">
+
+
+</body>
+</html>
