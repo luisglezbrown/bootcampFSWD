@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PiBank - La banca online sin comisiones</title>
+    <link rel="icon" type="image/jpg" href="images/favicon_large.jpg">
+</head>
+
+<body>
+    <!-- Menú superior -->
+    <div>
+        <a href="index.html"><img src="images/Logo-Pibank.png" alt="Logo Pibank"></a>
+        <a href="">Oficinas</a>
+        <a href="">Productos</a>
+        <a href="">Quiénes somos</a>
+        <a href="">Contacto</a>
+    </div>
+
+    <!-- Bloque de registro -->
+    <div>
+        <img src="images/register.gif" alt="Registro en pocos pasos">
+        <h3>Algo que es bueno para ti...</h3>
+        <p>
+            ¡tiene que ser sencillo!, como <strong>hacerte cliente de Pibank</strong>. Abre tu cuenta. ¿Y después? Podrás operar con ella desde
+            cualquier sitio, y si nos necesitas, estaremos para ayudarte ;)
+        </p>
+    </div><br>
+
+    <!-- Formulario -->
+    <form action="#">
+        <fieldset>
+            <legend><b>Datos personales</b></legend><br>
+
+            <label for="name">Nombre: </label>
+            <input type="text" id="name" name="userName" placeholder="Ej. Ana" required><br><br>
+
+            <label for="surname">Apellidos:</label>
+            <input type="text" name="userSurname" id="surname" placeholder="Ej. Botín O'Shea" required><br><br>
+
+            <div>
+                <span>Sexo:</span>
+                <input type="radio" name="genre" id="female" required>
+                <label for="female">Mujer</label>
+                <input type="radio" name="genre" id="male" >
+                <label for="male">Hombre</label>
+            </div><br><br>
+
+            <label for="userID">DNI/NIE/Pasaporte:</label>
+            <input type="text" name="userID" id="userID" placeholder="Ej. 12345678X" maxlength="9" required><br><br>
+
+            <label for="phone">Teléfono:</label>
+            <input type="tel" name="userTel" id="phone" placeholder="Ej. 6XXXXXXXX" maxlength="9" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" name="userEmail" id="email" placeholder="Ej. A.botin@bancosantander.com" required><br><br>
+        </fieldset><br>
+
+        <fieldset>
+            <legend><b>¿Qué productos quieres contratar?</b></legend><br>
+
+            <input type="checkbox" name="remunerada" id="remunerada" checked required>
+            <label for="remunerada">Cuenta Remunerada Pibank</label><br>
+
+            <input type="checkbox" name="nomina" id="nomina" checked>
+            <label for="nomina">Cuenta Nómina Pibank</label><br>
+
+            <input type="checkbox" name="hipoteca" id="hipoteca" checked>
+            <label for="hipoteca">Hipoteca Pibank</label><br>
+
+            <input type="checkbox" name="deposito" id="deposito" checked>
+            <label for="deposito">Depósito Pibank</label><br><br>
+        </fieldset><br>
+
+        <fieldset>
+            <legend><b>Y esto es lo único que te pedimos, confirmas...</b></legend><br>
+
+            <input type="checkbox" name="ageRequirement" id="ageRequirement" required>
+            <label for="ageRequirement">Ser mayor de edad y residente en España</label><br><br>
+
+            <input type="checkbox" name="taxesRequirement" id="taxesRequirement" required>
+            <label for="taxesRequirement">No pagar impuestos fuera de España ni ser ciudadano de EE.UU.</label><br><br>
+
+            <input type="checkbox" name="legalRequirement" id="legalRequirement" required>
+            <label for="legalRequirement">No tener actualmente o en los dos últimos años cargos de responsabilidad pública</label><br><br>
+        </fieldset><br>
+
+        <input type="submit" value="Confirmar 🚀"><br>
+    </form>
+</body>
+
+</html>
