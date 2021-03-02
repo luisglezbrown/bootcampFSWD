@@ -2,10 +2,28 @@
 <html lang="en">
 
 <head>
+    <!-- Metadata -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Glosario de etiquetas HTML para el bootcamp">
+    <meta name="author" content="Luis González">
+    
+    <meta name="robots" content="noindex">
+    <!-- Si no pongo nada, te indexa por defecto -->
+
+    <meta name="robots" content="nofollow">
+    <!-- Si no pongo nada, procesa los enlaces por defecto -->
+
+    <meta http-equiv="cache-control" content="no-cache">
+    <!-- Con esto no te guardan en caché el documento -->
+
+    <!-- <meta http-equiv="refresh" content="10; url=http://www.google.com"> -->
+    <!-- Redirige en 10seg. a google.com -->
+
     <title>Cheatsheet</title>
+
 </head>
 
 <body>
@@ -19,7 +37,6 @@
 
     <!-- Línea separadora -->
     <hr>
-
 
 
     <!-- Headings -->
@@ -75,7 +92,8 @@
     <p>El primer día fue el <time datetime="2021-02-01">la primera vez que nos vimos</time></p>
     <!-- la parte del atributo "datetime" sirve para programación, muy útil para JS -->
 
-    <br><hr><br>
+    <br>
+    <hr><br>
 
 
 
@@ -115,11 +133,13 @@
         <b>¡Si escribes directamente una clase, emmet la creará con esta etiqueta!</b>
     </div>
 
-    <br><hr><br>
+    <br>
+    <hr><br>
 
     <!-- Listas -->
 
-    <ul> <!-- lista desordendada -->
+    <ul>
+        <!-- lista desordendada -->
         <li>Elemento 1</li>
         <li>Elemento 2</li>
         <li>Elemento 3</li>
@@ -127,7 +147,8 @@
         <li>Elemento 5</li>
     </ul>
 
-    <ol> <!-- lista desordendada -->
+    <ol>
+        <!-- lista desordendada -->
         <li>Elemento</li>
         <li>Elemento padre
             <ol>
@@ -140,7 +161,8 @@
         <li>Elemento</li>
     </ol>
 
-    <ol start="500"> <!-- lista desordendada -->
+    <ol start="500">
+        <!-- lista desordendada -->
         <li>Elemento</li>
         <li>Elemento</li>
         <li>Elemento</li>
@@ -150,13 +172,14 @@
 
     <a href="../Ejercicios/Ejercicio_1.html">Ir al ejercicio 1</a>
 
-    <br><hr><br>
+    <br>
+    <hr><br>
 
     <!-- Tablas -->
 
     <table>
         <thead>
-            <caption>Poetas y escritores</caption>
+            <caption>Título de la tabla:</caption>
             <tr>
                 <th>Cabecera 1</th>
                 <th>Cabecera 2</th>
@@ -202,37 +225,40 @@
 
     <a href="../Ejercicios/Ejercicio_3.html">Ir al ejercicio 3</a>
 
-    <br><hr><br>
+    <br>
+    <hr><br>
 
 
     <!-- Formularios / Forms -->
 
     <form action="#" method="get">
-       
+
         <div class="inputblock">
             <label for="nameInput">Nombre:</label><br> <!-- En for ponemos lo que va en id -->
             <input type="text" id="nameInput" name="userName" placeholder="Introduce tu nombre">
             <!-- Lo que va en "name" llega al servidor como nombre de la variable -->
         </div><br>
-        
+
         <div class="inputblock">
-            <label for="apellido">Apellido:</label><br> 
+            <label for="apellido">Apellido:</label><br>
             <input type="text" id="apellido" name="userLastname" placeholder="Introduce tu apellido">
         </div><br>
 
         <div class="inputblock">
-            <label for="email">Email:</label><br> 
+            <label for="email">Email:</label><br>
             <input type="email" id="email" name="userEmail" placeholder="Introduce tu email">
         </div><br>
 
         <div class="inputblock">
-            <label for="passwordInput">Contraseña:</label><br> 
-            <input  maxlength="5" type="password" id="passwordInput" name="userEmail" placeholder="Introduce tu contraseña">
+            <label for="passwordInput">Contraseña:</label><br>
+            <input maxlength="5" type="password" id="passwordInput" name="userEmail"
+                placeholder="Introduce tu contraseña">
         </div><br>
 
         <div class="inputblock">
-            <label for="messageInput">Mensaje:</label><br> 
-            <textarea name="messageInput" id="messageInput" cols="30" rows="10" placeholder="Introduce tu mensaje"></textarea>
+            <label for="messageInput">Mensaje:</label><br>
+            <textarea name="messageInput" id="messageInput" cols="30" rows="10"
+                placeholder="Introduce tu mensaje"></textarea>
         </div><br>
 
         <div class="inputblock">
@@ -249,7 +275,7 @@
         <div class="inputblock">
             <label for="ageInput">Edad</label><br>
             <input type="number" name="number" id="ageInput" min="0" max="120" placeholder="Edad">
-            
+
             <label for="birthdayInput">Fecha de nacimiento</label>
             <input type="date" id="birthdayInput" name="birthdayInput">
         </div>
@@ -275,9 +301,9 @@
                 <input type="text" id="nameInput2" name="userName" placeholder="Introduce tu nombre">
                 <!-- Lo que va en "name" llega al servidor como nombre de la variable -->
             </div><br>
-            
+
             <div class="inputblock">
-                <label for="apellido2">Apellido:</label><br> 
+                <label for="apellido2">Apellido:</label><br>
                 <input type="text" id="apellido2" name="userLastname" placeholder="Introduce tu apellido">
             </div><br>
         </fieldset><br><br>
@@ -289,7 +315,7 @@
                 <label for="marriedInput">Casado</label>
             </div>
             <div>
-                <input type="radio" name="civilState" id="singleInput" checked> 
+                <input type="radio" name="civilState" id="singleInput" checked>
                 <label for="singleInput">Soltero</label>
             </div>
             <div>
@@ -310,7 +336,7 @@
                 <label for="iphoneProduct">iPhone</label>
             </div>
             <div>
-                <input type="checkbox" name="macbookProduct" id="macbookProduct" > 
+                <input type="checkbox" name="macbookProduct" id="macbookProduct">
                 <label for="macbookProduct">Macbook Pro</label>
             </div>
             <div>
@@ -328,11 +354,11 @@
         <label for="fuelLevel">Cantidad de gasolina</label>
         <meter min="0" max="100" low="33" high="66" id="fuelLevel" value="60"></meter><br><br>
 
-        
+
         <progress max="100" value="66"></progress><br><br>
 
         <label for="fileInput">Subir un archivo</label>
-        <input type="file" name="fileInput" id="fileInput"> 
+        <input type="file" name="fileInput" id="fileInput">
 
         <br><br>
         <input type="submit" value="Guardar">
@@ -344,9 +370,66 @@
 
 
     <!-- Multimedia -->
-    <img src="imagenes/background.jpeg" width="500" alt="">
+    <img src="imagenes/background.jpeg" width="500" alt="Fondo de colores">
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/9ZdXbZlmC6M" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe><br>
+
+    <iframe src="http://www.diariosur.es" width="560" height="315" frameborder="0"></iframe>
+
+    <iframe
+        src="http://www.juntadeandalucia.es/empleo/recursos/material_didactico/especialidades/materialdidactico_tic_linux_basico/manuales/tema1.pdf"
+        frameborder="0" width="560" height="315">
+    </iframe>
+
+    <object
+        data="http://www.juntadeandalucia.es/empleo/recursos/material_didactico/especialidades/materialdidactico_tic_linux_basico/manuales/tema1.pdf"
+        type="application/pdf" width="560" height="315">
+    </object><br><br><br>
 
 
+    <!-- Citas/Quotations -->
+    <h3>Citas/Quotations</h3>
+
+    <blockquote>
+        Esto se utiliza para textos largos. Es de tipo block y añade sangría.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio odit voluptate exercitationem qui
+        eum. Animi corporis, fugit corrupti ratione tenetur blanditiis amet quam omnis, inventore, totam et eveniet ea
+        deserunt in molestias soluta molestiae incidunt voluptatum debitis repellendus ullam voluptate velit mollitia!
+        Ab, excepturi iste? Porro tempora, quasi incidunt et odit id voluptatum eos sapiente odio, minus dolorem culpa
+        ratione est, delectus laboriosam voluptatibus. Officiis magni sit accusantium odit fuga earum blanditiis dolor,
+        similique perspiciatis nihil corporis minus ducimus? Perspiciatis qui esse omnis sit. Repellat sapiente
+        aspernatur, iusto nesciunt quo beatae minima vel, totam aliquam quia omnis maxime eius optio tenetur
+        necessitatibus non sit nobis nulla quis nisi tempora earum deleniti veritatis vero! Ratione provident minima
+        dolor accusantium? Molestias sint ipsam impedit veniam quia quo recusandae, obcaecati sit sed et accusantium
+        voluptatibus iusto, exercitationem earum ab at tempora mollitia aliquam! Inventore repellat labore nesciunt
+        nostrum consequuntur enim temporibus officiis ex eius harum maiores voluptatem cumque, consequatur
+        necessitatibus ipsam at natus aut error sunt fugit! Pariatur quod, dicta quia animi rerum laudantium. Nesciunt
+        sequi neque, provident excepturi distinctio nisi? Sequi odio ipsam consectetur accusamus labore quisquam
+        voluptas porro corporis earum ipsum rerum, quae nisi numquam repellat soluta libero maiores quidem culpa.
+    </blockquote>
+
+    <q>Esto se utiliza para textos cortos. Es de tipo inline y añade comillas</q><br><br>
+
+    <q>Esto es un ejemplo de abbr. La <abbr title="Comisión Europea">CE</abbr> aprobará nuevas vacunas.</q><br><br><br>
+
+    <!-- Script -->
+    <h3>Script</h3>
+    <p>Las etiquetas de js van siempre al final del código, ya que necesitan cargar la página antes de interactuar</p>
+
+    <script src=""></script>
+
+    <script>
+        document.write("Lo que escribo en esta etiqueta es código, esto no se suele usar")
+    </script>
+
+    <noscript>Error. Tu navegador no soporta JS</noscript><br><br><br>
+    <!-- Esta etiqueta va al inicio del código, es el mensaje a mostrar al usuario
+    en caso de que no tenga JS habilitado -->
+
+    <br><br><br><br><br>
 
 </body>
 
