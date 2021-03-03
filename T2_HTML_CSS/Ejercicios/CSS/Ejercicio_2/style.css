@@ -1,0 +1,13 @@
+div {
+    width: 400px;
+    background-color: rgb(228, 228, 228);
+    border: rgb(180, 180, 180) solid 1px;
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    margin: 10px;
+    text-decoration: none;
+    color: black;
+}
