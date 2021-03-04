@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#primero {
+    height: 50vh;
+    background-image: url(../images/background.jpg);
+    background-position: center top;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    border: 10px outset whitesmoke;
+    padding: 0 25px;
+}
+
+.empty {
+    height: 2000px;
+    background-color: seagreen;
+}
+
+h1 {
+    color: beige;
+}
+
+p {
+    color: red;
+    background-color: rgba(255, 255, 255, .5);
+    padding-left: 25px;
+}
+
