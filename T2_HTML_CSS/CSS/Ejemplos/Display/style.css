@@ -25,3 +25,13 @@ y de los <p> (que también son de tipo block) */
 }
 
 
+
+
+/* Centrar Horizontalmente EJE X */
+.x-centered {
+    background-color: teal;
+    height: 50px;
+    width: 25%;
+    
+    margin: auto;
+}
