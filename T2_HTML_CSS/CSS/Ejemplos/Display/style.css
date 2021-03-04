@@ -1,0 +1,27 @@
+/* Tipos de Display: none, inline, block, inline-block */
+
+/* El sombrerito significa que el valor "empieza por" */
+[class^="box"] {
+    background-color: steelblue;
+}
+
+.box-0 {
+    display: none;
+}
+
+/* El inline-block permite distintos bloques en la misma línea, respeta margenes,
+padding, etc... */
+.box-3,
+.box-4,
+.box-3 p,
+.box-4 p {
+    display: inline-block;
+}
+
+/* Estos contenedores los hago inline, para ello modifico display del contenedor
+y de los <p> (que también son de tipo block) */
+.box-5, .box-6, .box-5 p, .box-6 p {
+    display: inline;
+}
+
+
