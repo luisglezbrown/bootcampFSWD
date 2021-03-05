@@ -97,10 +97,109 @@ El resto de elementos no respetan su espacio*/
     padding: 15px 25px;
 
     position: sticky;
-    top: 15vh;
+    top: 0;
 }
 
 .pos-sticky a {
     text-decoration: none;
     color: white;
+}
+
+
+/* Posición Flotante */
+.pos-float-parent {
+    border: 5px solid royalblue;
+}
+
+.pos-float-child-1 {
+    background-color: brown;
+    height: 100px;
+    width: 33.3%;  
+
+    float: left;
+}
+
+.pos-float-child-2 {
+    background-color: darkblue;
+    color: white;
+    height: 100px;
+    width: 33.3%;   
+
+    float: right;
+}
+
+.pos-float-child-3 {
+    background-color: darkorange;
+    height: 50px;
+    width: 100%;
+
+}
+ 
+.pos-float-child-4 {
+    background-color: greenyellow;
+    height: 100px;
+    width: 100%;
+
+    clear: both;
+}
+
+.pos-float-child-5 {
+    background-color: purple;
+    height: 100px;
+    width: 50%;
+
+    float: right;
+}
+
+.pos-float-child-6 {
+    background-color: olive;
+    height: 100px;
+    width: 75%;
+
+    float: right;
+}
+
+/* Overflow - Gestión del desbordamiento de contenido */
+[class^='overflow-parent'] {
+    width: 200px;
+    height: 100px;
+    border: 3px dashed black;
+    margin-bottom: 100px;
+}
+
+.overflow-parent-1 {
+    overflow: hidden;
+}
+
+.overflow-parent-2 {
+    overflow: visible;
+}
+
+.overflow-parent-3 {
+    overflow: scroll;
+}
+
+
+/* Tamaño de cajas (Box - Sizing) */
+/* El valor por defecto es content-box */
+.box-sizing-parent  {
+    width: 200px;
+    height: 200px;
+    border: 10px solid goldenrod;
+    background-color: white;
+}
+
+.box-sizing-child {
+    width: 100%;
+    height: 50px;
+    background-color: gray;
+    border: 10px solid darkolivegreen;
+
+    box-sizing: content-box;
+}
+
+.border-box {
+    margin-top: 10px;
+
+    box-sizing: border-box;
 }
