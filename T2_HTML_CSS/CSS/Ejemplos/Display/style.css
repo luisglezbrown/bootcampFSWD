@@ -25,13 +25,82 @@ y de los <p> (que también son de tipo block) */
 }
 
 
+.rectangle {
+    background-color: teal;
+    height: 50px;
+    width: 25%;
+}
 
 
 /* Centrar Horizontalmente EJE X */
 .x-centered {
-    background-color: teal;
-    height: 50px;
-    width: 25%;
-    
     margin: auto;
+}
+
+
+/* Posición relativa */
+/* La nueva posición va en relación de la posición
+original del elemento */
+/* El espacio que ocuparía originalmente es respetado por el resto
+de elementos */
+.pos-relative {
+    position: relative;
+    left: 150px;
+    top: -30px;
+    z-index: -1;
+}
+
+
+/* Posición absoluta */
+/* La nueva posición va en relación a su contenedor padre, ojo!
+que al padre hay que declararlo como relative.
+Si no se declara al padre como relative, el child funciona
+como un fixed pero no fijo (se mueve al hacer scroll). 
+El resto de elementos no respetan su espacio*/
+.pos-absolute-parent {
+    height: 300px;
+    border: 15px solid tomato;
+
+    position: relative;
+}
+
+.pos-absolute-child {
+    height: 50px;
+    width: 50px;
+    background-color: #333;
+
+    position: absolute;
+    top: 50px;
+    left: 200px;
+}
+
+/* Posición Fija */
+.pos-fixed {
+    background-color: red;
+    padding: 20px 30px;
+    border: black outset 5px;
+
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+.pos-fixed > a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Posición Sticky */
+.pos-sticky {
+    background-color: steelblue;
+    padding: 15px 25px;
+
+    position: sticky;
+    top: 15vh;
+}
+
+.pos-sticky a {
+    text-decoration: none;
+    color: white;
 }
