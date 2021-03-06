@@ -1,0 +1,19 @@
+ul {
+    width: 250px;
+    cursor: pointer; /* Cambia el estilo del puntero al pasar por encima */
+    list-style-position: inside; /* Mete el icono dentro del li */
+    list-style-image: url(images/ul-icon.png);  
+}
+
+li {
+    background-color: #ececec;
+    border: 1px solid #808080;
+    padding: 5px 10px;
+    margin-top: -1px; /* Para que se solape con el border-bottom del elemento anterior */
+}
+
+
+li:hover {
+    background-color: #bdbbbb;
+    list-style-image: url(images/ul-icon-hover.png);
+}
