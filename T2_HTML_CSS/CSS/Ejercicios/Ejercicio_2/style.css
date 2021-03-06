@@ -1,13 +1,34 @@
+/* Estilos generales */
 div {
     width: 400px;
     background-color: rgb(228, 228, 228);
     border: rgb(180, 180, 180) solid 1px;
+}
+
+a {
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Estilo con flex */
+.container-flex{
     display: flex;
     justify-content: space-between;
 }
 
-a {
-    margin: 10px;
-    text-decoration: none;
-    color: black;
+
+/*Estilo con float*/
+
+.container-float {
+    overflow: hidden;
+}
+
+a.prev {
+    float: left;
+}
+
+a.next {
+    float: right;
 }
