@@ -13,6 +13,7 @@ li {
 }
 
 
+/* Modifica el estilo al pasar el puntero sobre el elemento */
 li:hover {
     background-color: #bdbbbb;
     list-style-image: url(images/ul-icon-hover.png);
