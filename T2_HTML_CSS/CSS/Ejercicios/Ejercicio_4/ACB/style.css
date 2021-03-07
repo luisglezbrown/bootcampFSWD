@@ -1,0 +1,226 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* 
+1. FUENTES
+2. CABECERA
+3. LAYOUT
+4. PARTE IZQ.
+5. PARTE CENTRAL
+6. PIE DE PÁGINA
+*/
+
+
+/* Comienza FUENTES --------------------------------------------------*/
+a {
+    text-decoration: none;
+}
+
+p {
+    text-align: justify;
+    padding-bottom: 0.75rem;
+}
+
+label {
+    font-weight: bold;
+    color: #fff;
+}
+
+header a {
+    font-family: 'Voltaire', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #46B4E6;
+    padding-right: 25px;
+}
+
+header a:hover {
+    color: #fff;
+}
+
+.titular,
+.titular a {
+    color: #001A7D;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+    padding-top: 1.4rem;
+}
+
+.titular a:hover{
+    color: blue;
+}
+
+.verMas {
+    color: #E24306;
+}
+
+.verMas:hover {
+    color: #fff;
+    background-color: #E24306;
+}
+
+footer nav a,
+footer p {
+    font-family: 'Voltaire', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+footer a:hover {
+    color: #E24306;
+}
+/* Acaba FUENTES */
+
+
+
+/* Comienza CABECERA --------------------------------------------------*/
+header {
+    width: 100%;    
+    position: fixed;
+    top: 0;
+}
+
+.headerNegro, .headerAzul {
+    width: 100%;
+    padding: 0 5%;  
+}
+
+.headerNegro {
+    background-color: #262626;
+}
+
+.headerAzul {
+    background-color: #001A7D;
+    height: 30px;
+    padding-top: 4px;
+}
+
+form {
+    float: right;
+    padding-top: 28px;
+}
+
+button {
+    display: none;
+}
+/* Acaba CABECERA */
+
+
+
+/* Comienza LAYOUT --------------------------------------------------*/
+.containerLeft,
+.containerRight {
+    margin-top: 138px;
+    margin-bottom: 50px;
+}
+
+aside.containerLeft {
+    width: 20%;
+    float: left;
+    padding: 0 1rem;
+}
+
+main.containerRight {
+    width: 79%;
+    float: right;
+}
+
+section.subContainerLeft {
+    width: 79%;
+    float: left;
+    padding: 0 1rem;
+}
+
+aside.subContainerRight {
+    width: 20%;
+    float: right;
+    padding: 0 1rem;
+}
+/* Acaba LAYOUT */
+
+
+
+/* Comienza PARTE IZQUIERDA --------------------------------------------------*/
+.containerLeft {
+    border-right: 3px dashed #E24306;
+}
+
+.partner {
+    display: block;
+    text-transform: uppercase;
+    color: #E24306;
+}
+
+.containerLeft ul {
+    list-style: none;
+    padding: 0;
+}
+
+iframe {
+    margin-top: 1rem;
+}
+/* Acaba PARTE IZQUIERDA */
+
+
+
+/* Comienza PARTE CENTRAL --------------------------------------------------*/
+.imgNews {
+    height: 150px;
+    float: left;
+    margin-right: 1.5rem;
+}
+/* Acaba PARTE CENTRAL */
+
+
+
+/* Comienza PIE DE PAGINA --------------------------------------------------*/
+footer {
+    position: fixed;
+    bottom: 0;
+    height: 26px;
+    width: 100%;
+    background-color: #262626;
+    padding: 0 5%;  
+    overflow: hidden;
+}
+
+footer nav {
+    padding-top: 5px;
+}
+
+footer nav a {
+    padding-right: 15px;
+}
+
+footer p {
+    float: right;
+    color: #808080;
+}
+/* Acaba PIE DE PAGINA */
+
+
+
+
+/* .containerLeft,
+.containerRight {
+    border: 1px solid red;
+}
+
+.subContainerLeft,
+.subContainerRight {
+    border: 1px solid blue;
+} 
+
+footer,
+.headerNegro,
+.headerAzul {
+    border: 1px solid yellow;
+} */
