@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    background-color: blueviolet;
+    text-align: center;
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: bold;
+    display: block;
+    text-decoration: none;
+    padding: 1rem;
+
+}
+
+nav a:last-child {
+    display:none;
+}
+
+a:hover {
+    background-color: #ae62f5;
+}
+
+
+
+@media only screen and (min-width: 700px) {
+    a {
+        float: left;
+        width: 25%;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    a {
+        width: 20%;
+    }
+
+    nav a:last-child {
+        display:block;
+    }
+}
