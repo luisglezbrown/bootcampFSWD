@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    border: 1px solid grey;
+    padding: 5px;
+}
+
+div.container {
+    position: relative;
+}
+
+form {
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    right: 5px;
+}

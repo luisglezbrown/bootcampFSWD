@@ -3,6 +3,7 @@ ul {
     cursor: pointer; /* Cambia el estilo del puntero al pasar por encima */
     list-style-position: inside; /* Mete el icono dentro del li */
     list-style-image: url(images/ul-icon.png);  
+    padding: 0;
 }
 
 li {

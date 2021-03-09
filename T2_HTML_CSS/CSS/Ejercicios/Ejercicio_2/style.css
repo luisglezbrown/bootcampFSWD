@@ -3,10 +3,10 @@ nav {
     width: 400px;
     background-color: rgb(228, 228, 228);
     border: rgb(180, 180, 180) solid 1px;
+    padding: 10px;
 }
 
 a {
-    padding: 10px;
     text-decoration: none;
     color: black;
 }
@@ -20,14 +20,6 @@ a {
 
 
 /*Estilo con float*/
-
-.container-float {
-    overflow: hidden;
-}
-
-a.prev {
-    float: left;
-}
 
 a.next {
     float: right;

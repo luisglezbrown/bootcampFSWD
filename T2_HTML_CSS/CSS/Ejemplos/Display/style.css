@@ -203,3 +203,25 @@ El resto de elementos no respetan su espacio*/
 
     box-sizing: border-box;
 }
+
+
+/* Media Queries */
+
+.responsive {
+    height: 100px;
+    background-color: aquamarine;
+    width: 20%;
+    margin-top: 30px;
+}
+
+@media only screen and (max-width: 920px) {
+    .responsive {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
+}
