@@ -1,0 +1,72 @@
+/* Flexbox */
+
+.flex-parent {
+    display: flex;
+
+    /* flex-direction: row; row(default)|column */
+    /* flex-wrap: nowrap; nowrap(default) | wrap | wrap-reverse */
+    flex-flow: row nowrap; /* Shorthand para: flex-direction flex-wrap */
+
+    justify-content: center;
+    justify-content: flex-start; /* Por defecto */
+    justify-content: flex-end;
+    justify-content: space-between;
+    justify-content: space-evenly;
+    justify-content: space-around;
+
+    align-items: center;
+    align-items: flex-start;
+    align-items: flex-end;
+    align-items: stretch; /* Por defecto */
+
+    height: 250px;
+    border: 1px solid #333;
+}
+
+[class^=flex-child] {
+    width: 250px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-parent > div:nth-child(odd) {
+    background-color: #ddd;
+    color: #333;
+}
+
+.flex-parent > div:nth-child(even) {
+    background-color: #333;
+    color: #ddd;
+}
+
+.flex-child-1 {
+    flex-shrink: 2;
+}
+
+.flex-child-2 {
+    flex-grow: 1;
+    flex-shrink: 3;
+}
+
+.flex-child-3 {
+    flex-grow: 2;
+}
+
+
+/* Ejemplo */
+.pos-parent {
+    height: 300px;
+    border: 15px solid tomato;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pos-child {
+    height: 50px;
+    width: 50px;
+    background-color: #333;
+}
