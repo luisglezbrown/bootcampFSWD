@@ -4,16 +4,75 @@
 
 .container {
     border: 1px solid grey;
-    padding: 5px;
+    padding: 0.5rem;
 }
 
-div.container {
-    position: relative;
+
+/* Cabecera */
+header div.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-form {
-    position: absolute;
-    top: 50%;
-    margin-top: -20px;
-    right: 5px;
+header {
+    margin-bottom: 1rem;
+}
+
+
+/* Formato aside*/
+.news span {
+    display: block;
+}
+
+.news>a {
+    display: block;
+}
+
+
+/* Overlay parte principal */
+aside {
+    float: left;
+    width: 24%;
+}
+
+section {
+    float: right;
+    width: 75%;
+}
+
+
+/* Overlay Parte derecha */
+
+section {
+    border: 1px solid grey;
+}
+
+.main-content {
+    float: left;
+    width: 75%;
+}
+
+.side-content {
+    float: right;
+    width: 24%;
+}
+
+img {
+    width: 150px;
+    float: left;
+    padding: 0 1rem 1rem 0;
+}
+
+
+/* pie de pagina */
+.clearfix {
+    clear: both;
+    margin-bottom: 1rem;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
