@@ -1,0 +1,40 @@
+div {
+    padding: 1rem;
+}
+
+body {
+    display: grid;
+    gap: 10px;
+    grid-template-rows: 1fr 2fr 1fr 1fr;
+    grid-template-areas: "title title"
+                        "main masthead"
+                        "main sidebar"
+                        "footer footer";
+}
+
+.page-title {
+    grid-area: title;
+    background-color: deepskyblue;
+}
+
+.main-content {
+    grid-area: main;
+    background-color: blueviolet;
+    color: white;
+}
+
+.masthead {
+    grid-area: masthead;
+    background-color: #0404b6;
+    color: white;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #a9e4e4;
+}
+
+.footer-content {
+    grid-area: footer;
+    background-color: burlywood;
+}
