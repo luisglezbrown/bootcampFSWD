@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+    padding: 5px 2px;
+}
+
+.container {
+    border: 1px solid gray;
+}
+
+
+/* Cabecera */
+header div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Layout general */
+main {
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    gap: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+
+/* Layout Parte principal */
+section {
+    display: grid;
+    grid-template-columns: 1fr 20%;
+    gap: 1%;
+}
+
+
+/* Formato enlaces en aside */
+.news > a,
+.news > span {
+    display: block;
+    padding: 0 2px;
+}
+
+
+/* Pie de Página  */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
