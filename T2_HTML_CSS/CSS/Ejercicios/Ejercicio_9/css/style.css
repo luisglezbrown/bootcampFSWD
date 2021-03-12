@@ -1,0 +1,99 @@
+.container {
+    width: 630px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+}
+
+[class^="box"] {
+    height: 150px;
+    width: 150px;
+    background-color: teal;
+    opacity: 0;
+
+    transition: transform 1s ease;
+
+    animation-name: appear;
+    animation-duration: 2s;
+}
+
+.transform:hover {
+    transform: scale(1.1);
+    box-shadow: 2px 2px 5px #333;
+}
+
+.box-1 {
+    animation-delay: 0s;
+}
+
+.box-2 {
+    animation-delay: 1s;
+}
+
+.box-3 {
+    animation-delay: 2s;
+}
+
+.box-4 {
+    animation-delay: 3s;
+}
+
+.box-5 {
+    animation-delay: 4s;
+}
+
+.box-6 {
+    animation-delay: 5s;
+}
+
+.box-7 {
+    animation-delay: 6s;
+}
+
+.box-8 {
+    animation-delay: 7s;
+}
+
+.box-9 {
+    animation-delay: 8s;
+}
+
+.box-10 {
+    animation-delay: 9s;
+}
+
+.box-11 {
+    animation-delay: 10s;
+}
+
+.box-12 {
+    animation-delay: 11s;
+}
+
+.box-13 {
+    animation-delay: 12s;
+}
+
+.box-14 {
+    animation-delay: 13s;
+}
+
+.box-15 {
+    animation-delay: 14s;
+}
+
+.box-16 {
+    animation-delay: 15s;
+}
+
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

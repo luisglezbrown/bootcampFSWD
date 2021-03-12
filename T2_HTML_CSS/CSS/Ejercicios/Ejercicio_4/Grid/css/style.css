@@ -33,6 +33,12 @@ section {
     gap: 1%;
 }
 
+img {
+    width: 150px;
+    margin-right: 1rem;
+    float: left;
+}
+
 
 /* Formato enlaces en aside */
 .news > a,
