@@ -92,7 +92,7 @@ a {
 }
 
 
-@media only screen and (min-width: 540px){
+@media only screen and (min-width: 500px){
     .card {
         max-width: 600px;
         height: 450px;
