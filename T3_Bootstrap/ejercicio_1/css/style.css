@@ -1,0 +1,9 @@
+.carousel-item {
+    height: 60vh;
+    background-size: cover;
+    background-position: center center;
+}
+
+.carousel-1 {background-image: url(../images/car-1.jpg);}
+.carousel-2 {background-image: url(../images/car-2.jpg);}
+.carousel-3 {background-image: url(../images/car-3.jpg);}

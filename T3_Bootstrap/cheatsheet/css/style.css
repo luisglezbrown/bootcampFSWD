@@ -1,11 +1,23 @@
-div {
-  background-color: red;
-}
-div a {
-  color: white;
-}
-div button {
-  border-radius: 15px;
+.sized {
+  height: 100px;
 }
 
-/*# sourceMappingURL=style.css.map */
+.columns-1 {
+  width: 100%;
+}
+
+.columns-2 {
+  width: 50%;
+}
+
+.columns-3 {
+  width: 33.3333333333%;
+}
+
+.columns-4 {
+  width: 25%;
+}
+
+.columns-5 {
+  width: 20%;
+}

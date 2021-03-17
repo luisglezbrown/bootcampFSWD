@@ -1,11 +1,13 @@
-div {
-    background-color: red;
+// sass --watch --no-source-map scss:css
 
-    a {
-        color: white;
-    }
+.sized {
+    height: 100px;
+}
 
-    button{
-        border-radius: 15px;
+$columns: 5;
+
+@for $i from 1 through $columns {
+    .columns-#{$i} {
+        width: (100% / $i);
     }
 }
