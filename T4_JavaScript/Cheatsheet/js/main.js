@@ -57,7 +57,7 @@ y no está permitido */
 
 console.clear()
 // ------------------ Tipos de datos ------------------
-
+// Datos primitivos
 let str = String('I am a string');
 let str2 = 'I am another string';
 console.log(typeof str, typeof str2, typeof '');
@@ -65,3 +65,97 @@ console.log(typeof str, typeof str2, typeof '');
 let num = Number(5);
 let num2 = 5;
 console.log(typeof num, typeof num2, typeof 7, typeof '7')
+
+let bool = Boolean(true);
+let bool2 = false;
+console.log(typeof bool, typeof bool2, typeof 'true');
+
+let undef;
+console.log(undef, typeof undef);
+
+let selectedColor = null;   // Útil para limpiar una variable
+console.log(selectedColor, typeof selectedColor);
+
+// Objects
+let array1 = Array(1, 2, 3);
+let array2 = [3, 2, 1];
+console.log(array1, array2);
+console.log(typeof array1, typeof array2);
+
+console.log(typeof new Date('2021-03-19'));
+console.log(typeof new Error('Mensaje de error'));
+
+console.clear();
+// ------------------ Strings ------------------
+str = 'Hola futuro';
+console.log(str, str.length);
+console.log(str.indexOf('futuro'), str.indexOf('cadena no presente'));
+console.log('La última ocurrencia de "u" está en el índice', str.lastIndexOf('u'));
+console.log(str.substring(1,3));
+
+
+if(str.indexOf('caca') == -1) {
+    //eso es que no existe
+}
+
+console.log('Hola mundo'.concat('. Adiós mundo.'));
+console.log('Hola mundo' + '. Adiós mundo.');
+
+str = str + '. Adiós Mundo'
+str += '. Adiós Mundo' // Esto es igual a str = str + '. Adiós Mundo'
+console.log(str);
+
+console.log(str.replace('Mundo', 'futuro'));
+console.log(str.replaceAll('Mundo', 'futuro'));
+console.log(str.toLowerCase());
+console.log(str.toUpperCase());
+
+console.log(`El día de mi cumpleaños es ${day}.`) // String template
+
+//Parsing - Cambiar el tipo a un dato (Ej: cambiar de string a number)
+let number = Number('asdasd'); // NaN = Not a Number. No genera error.
+console.log(number, typeof number);
+
+number = Number('1000');
+console.log(number, typeof number);
+
+number += '1000'; // Al haber dos tipos hace una concatenación, no una suma
+console.log(number, typeof number);
+
+
+// ------------------ Objects ------------------
+let person = {       // con las llaves se crean objetos en JS
+    name: 'John',
+    age: 30,
+    blonde: false,
+    walk: function() {
+        console.log('Hey, estoy andando');
+    }, // Previo a EC6
+    jump() {
+        console.log('Hey, estoy saltando!');
+    }
+}
+
+//Acceso por punto - Dot notation
+console.log(typeof person, person);
+console.log(`Se llama ${person.name} y tiene ${person.age} años`);
+
+person.name = 'Jane';
+
+console.log(person);
+console.log(`Se llama ${person.name} y tiene ${person.age} años`);
+
+//Acceso por corchetes - Brackets notation
+let propertyName = 'age';
+console.log(person[propertyName]);
+
+//Ampliación
+person.children = ['Marta', 'Pedro'];
+console.log(person);
+console.log(person.children);
+console.log(person.children[1]);
+console.log(`Se llama ${person.name} y sus hijos son ${person.children}`);
+
+person.jump();
+person.walk();
+
