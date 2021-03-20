@@ -126,7 +126,7 @@ header{
     position: fixed;
     top: 0;
     left: 0;
-    min-width: 320px;
+    /* min-width: 320px; */
 
     height: 46px;
     width: 100%;
@@ -180,12 +180,61 @@ div.user {                      /* Imagen usuario */
 /* Acaba Barra cabecera */
 
 /* Menú lateral desktop */
+aside {
+    width: 180px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: white;
+}
+
+.box-lateral {
+    height: 50px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 1rem;
+    color: gray;
+    font-size: 12px;
+    font-weight: bold;
+    border-left: 3px solid white;
+}
+
+.logo {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 1rem;
+    height: 75px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--gray-dark);
+}
+
+aside span {
+    margin-left: 1rem;
+}
+
+.box-lateral:hover {
+    color: var(--gray-dark);
+    font-size: 12px;
+    font-weight: bold;
+    border-left-color: var(--purple-light);
+}
+
+
 
 /* Acaba Menú lateral desktop */
 
 
 /* Parte principal */
-main {
+aside {
+    display: none;
+    width: 200px;
+}
+
+section {
     width: 95%;
     margin: 60px auto;
     min-width: 320px;
@@ -262,17 +311,34 @@ table {                     /* Formatos para la tabla */
 .col-40 {width: 40%;}
 .col-20 {width: 20%;}
 
-th, td {
+th, 
+td {
     border-bottom: 1px solid #dfdfdf;
     padding: 0.5rem;
 }
 
-th {
+th, 
+tfoot td {
     text-align: left;
     text-transform: uppercase;
     font-size: 12px;
     color: gray;
+    padding: 1rem 0.5rem;
+}
+
+td.pagination {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pagination a {
+    display: inline;
     padding: 0.5rem;
+    color: gray;
 }
 
 tbody tr {
@@ -287,19 +353,20 @@ tbody tr {
     display: none;
 }
 
+table p {
+    font-size: 12px;    
+}
+
 .name {
-    font-size: 12px; 
     margin: 0; 
 }
 
 .job {
-    font-size: 12px;  
     margin: 0;
     color:var(--gray-dark);
 }
 
 .status {
-    font-size: 12px; 
     font-weight: bold; 
     padding: 0.3em 0.8em; 
     display: inline-block; 
@@ -321,10 +388,39 @@ tbody tr {
     color: #333;
 }
 
+tbody tr:hover {
+    background-color: var(--gray-light);
+    border: var(--purple-light);
+    box-shadow: -2px 0 0 var(--purple-light);
+}
+
+.fa-bars:hover,
+.notification:hover,
+.user:hover {
+    cursor: pointer;
+}
+
+.pagination a:hover {
+background-color: var(--purple-light);
+border-radius: 10px;
+color: var(--gray-light);
+}
 
 
+@media only screen and (min-width: 690px){
+    main {
+        display: flex;
+        flex-direction: row;
+    }
 
-@media only screen and (min-width: 500px){
+    aside {
+        display: block;
+    }
+
+    section {
+        padding-left: 200px;
+    }
+
     .card {
         max-width: 600px;
         height: 450px;
@@ -362,9 +458,15 @@ tbody tr {
     header .fa-bars {
         display: none;
     }
+
+    .amount,
+    .date {
+        font-size: 16px;
+    }
+
 }
 
-@media only screen and (min-width: 950px){
+@media only screen and (min-width: 1150px){
     .key-subinner {
         width: 24%;
     }

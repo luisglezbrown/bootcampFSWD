@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de control</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="icons/css/all.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <!-- Barra de Cabecera -->
+    <header>
+        <i class="fas fa-bars fa-lg text-purple pointer"></i>
+
+        <div class="search-iner">
+            <input type="search" name="userSearch" id="userSearch" placeholder="Search for anything" class="search-input">
+            <i class="fas fa-search text-purple"></i>
+        </div>
+
+        <div class="notification-iner pointer">
+            <i class="fas fa-bell fa-lg text-purple"></i>
+            <i class="fas fa-circle fa-xs"></i>
+        </div>
+
+        <div class="user pointer"></div>
+    </header>
+
+
+    <!-- Menú lateral -->
+    <aside>
+        <div class="logo bold">
+            <h3 class="pointer">🚀 CodeSpace Shop</h3>
+        </div>
+
+        <div class="box-lateral pointer">
+            <i class="fas fa-home"></i>
+            <p class="bold">Dashboard</p>
+        </div>
+
+        <div class="box-lateral pointer">
+            <i class="fas fa-user-friends"></i>
+            <p class="bold">Clients</p>
+        </div>
+
+        <div class="box-lateral pointer">
+            <i class="fas fa-box-open"></i>
+            <p class="bold">Products</p>
+        </div>
+
+        <div class="box-lateral pointer">
+            <i class="fas fa-file-alt"></i>
+            <p class="bold">Sales</p>
+        </div>
+
+        <div class="box-lateral pointer">                
+            <i class="fas fa-truck"></i>
+            <p class="bold">Shipping</p>
+        </div>
+
+        <div class="box-lateral pointer">                
+            <i class="fas fa-chart-pie"></i>
+            <p class="bold">Statistics</p>
+        </div>
+
+        <div class="purple-frame pointer">
+            <a href="#" class="text-white">Add product</a>
+            <a href="#" class="text-white">+</a>
+        </div>
+    </aside>
+
+
+    <!-- Menú lateral -->
+    <main>
+        <h1 class="bold">Dashboard</h1>
+
+        <div class="purple-frame pointer"> <!-- Banner Morado -->
+            <i class="fas fa-star text-white"><span> See what you've missed!</span></i>
+            <a href="#" class="text-white">View more -></a>
+        </div>
+
+
+        <div class="keyfacts-iner"> <!-- Contenedor 4 titulares -->
+            <div class="key-box">
+                <div class="icon-box clients">
+                    <i class="fas fa-users fa-lg"></i>
+                </div>
+                <div class="text-box bold">
+                    <p>Total clients</p>
+                    <h3 class="fact-text">6389</h3>
+                </div>
+            </div>
+
+            <div class="key-box">
+                <div class="icon-box balance">
+                    <i class="fas fa-money-bill-wave fa-lg"></i>
+                </div>
+                <div class="text-box bold">
+                    <p>Account balance</p>
+                    <h3 class="fact-text">$ 46,760.89</h3>
+                </div>
+            </div>
+
+            <div class="key-box">
+                <div class="icon-box sales">
+                    <i class="fas fa-shopping-cart fa-lg"></i>
+                </div>
+                <div class="text-box bold">
+                    <p>New sales</p>
+                    <h3 class="fact-text">376</h3>
+                </div>
+            </div>
+
+            <div class="key-box">
+                <div class="icon-box contacts">
+                    <i class="fas fa-comment-dots fa-lg"></i>
+                </div>
+                <div class="text-box bold">
+                    <p>Pending contacts</p>
+                    <h3 class="fact-text">35</h3>
+                </div>
+            </div>
+        </div>
+
+       <table>      <!-- Banner Morado -->
+            <thead>
+                <tr>
+                    <th>client</th>
+                    <th>amount</th>
+                    <th>status</th>
+                    <th>date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="user-iner">
+                        <div class="user photo-1"></div>
+                        <div class="text-iner">
+                            <p class="bold">Hans Burger</p>
+                            <p>10x Developer</p>
+                        </div>
+                    </td>
+                    <td><p>$ 863.45</p></td>
+                    <td><p class="status approved">Approved</p></td>
+                    <td><p>06/10/2020</p></td>
+                </tr>
+                <tr>
+                    <td class="user-iner">
+                        <div class="user photo-2"></div>
+                        <div class="text-iner">
+                            <p class="bold">Sarah Curry</p>
+                            <p>Designer</p>
+                        </div>
+                    </td>
+                    <td><p>$ 86.00</p></td>
+                    <td><p class="status denied">Denied</p></td>
+                    <td><p>06/10/2020</p></td>
+                </tr>
+                <tr>
+                    <td class="user-iner">
+                        <div class="user photo-3"></div>
+                        <div class="text-iner">
+                            <p class="bold">Rulia Joberts</p>
+                            <p>Actress</p>
+                        </div>
+                    </td>
+                    <td><p>$ 1276.45</p></td>
+                    <td><p class="status approved">Approved</p></td>
+                    <td><p>06/10/2020</p></td>
+                </tr>
+                <tr>
+                   <td class="user-iner">
+                        <div class="user photo-4"></div>
+                        <div class="text-iner">
+                            <p class="bold">Wenzel Dashington</p>
+                            <p>Actor</p>
+                        </div>
+                    </td>
+                    <td><p>$ 863.45</p></td>
+                    <td><p class="status expired">Expired</p></td>
+                    <td><p>06/10/2020</p></td>
+                </tr>
+                <tr>
+                    <td class="user-iner">
+                        <div class="user photo-5"></div>
+                        <div class="text-iner">
+                            <p class="bold">Dave Li</p>
+                            <p>Influencer</p>
+                        </div>
+                    </td>
+                    <td><p>$ 863.45</p></td>
+                    <td><p class="status approved">Approved</p></td>
+                    <td><p>06/10/2020</p></td>
+                </tr>
+                <tr>
+                    <td class="user-iner">
+                        <div class="user photo-6"></div>
+                        <div class="text-iner">
+                            <p class="bold">Maria Ramovic</p>
+                            <p>Runner</p>
+                        </div>
+                    </td>
+                    <td><p>$ 863.45</p></td>
+                    <td><p class="status approved">Approved</p></td>
+                    <td><p>06/10/2020</p></td>
+                </tr>
+                <tr>
+                    <td class="user-iner">
+                        <div class="user photo-7"></div>
+                        <div class="text-iner">
+                            <p class="bold">Hitney Wouston</p>
+                            <p>Singer</p>
+                        </div>
+                    </td>
+                    <td><p>$ 863.45</p></td>
+                    <td><p class="status expired">Expired</p></td>
+                    <td><p>06/10/2020</p></td>
+                </tr>
+                <tr>
+                    <td class="user-iner">
+                        <div class="user photo-8"></div>
+                        <div class="text-iner">
+                            <p class="bold">Sponge Bob</p>
+                            <p>Cartoon</p>
+                        </div>
+                    </td>
+                    <td><p>$ 863.45</p></td>
+                    <td><p class="status approved">Approved</p></td>
+                    <td><p>06/10/2020</p></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2" class="bold">
+                        <p>SHOWING 21 - 30 OF 100</p>                            
+                    </td>
+                    <td colspan="2" class="pagination bold">
+                        <a href="">&lt;</a>
+                        <a href="">1</a>
+                        <a href="">2</a>
+                        <a href="">3</a>
+                        <a href="">4</a>
+                        <a href="">...</a>
+                        <a href="">8</a>
+                        <a href="">9</a>
+                        <a href="">&gt;</a>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+
+    </main>
+
+</body>
+</html>
