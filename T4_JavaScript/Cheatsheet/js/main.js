@@ -6,7 +6,7 @@ function saludo () {
     alert('Hola desde un script externo');
     console.log('Has hecho click');
 }
-document.getElementsByTagName('a').item(2).addEventListener('click', saludo)
+//document.getElementsByTagName('a').item(2).addEventListener('click', saludo)
 
 
 // ------------------ Depuración // logging ------------------
@@ -159,3 +159,92 @@ console.log(`Se llama ${person.name} y sus hijos son ${person.children}`);
 person.jump();
 person.walk();
 
+// This
+const person2 = {
+    name: 'Thomas',
+    talk() {
+        console.log(this);
+        console.log(`Me llamo ${this.name}`);    //'This' Se refiere al objeto al que pertenece la función.
+    }
+}
+
+const person3 = {
+    name: 'Sarah',
+    talk() {
+        console.log(this);
+        console.log(`Me llamo ${this.name}`);    //'This' Se refiere al objeto al que pertenece la función.
+    }
+}
+
+person2.talk();
+person3.talk();
+
+
+console.clear();
+// ------------------ Arrays ------------------
+let selectedColors = ['red', 'blue'];
+console.log(selectedColors, selectedColors.length, typeof selectedColors);
+
+selectedColors[2] = 'green'; //Una forma de añadir elementos al array sabiendo la longitud.
+console.log(selectedColors, selectedColors.length);
+
+selectedColors.push('violet', 'white'); //Añade el parametro al final del array
+console.log(selectedColors, selectedColors.length);
+
+selectedColors.pop(); //Elimina el último elemento del array.
+console.log(selectedColors, selectedColors.length);
+
+selectedColors.unshift('white', 'black'); //Añade elementos al inicio del array.
+console.log(selectedColors, selectedColors.length);
+
+selectedColors.shift() //Elimina el primer elemento del array.
+console.log(selectedColors, selectedColors.length);
+
+selectedColors.sort(); //Ordena alfabéticamente según la tabla ASCII.
+console.log(selectedColors, selectedColors.length);
+
+console.log('El rojo está en el índice', selectedColors.indexOf('red')); //Te busca el index en el array del elemento buscado.
+
+console.log(selectedColors.slice(1,3)); //Devuelve una copia de la sección pero no modifica. El segundo parámetro no lo incluye.
+console.log(selectedColors, selectedColors.length);
+
+console.log('Los elementos borrados son:', selectedColors.splice(1,3)); //Elimina el número de elementos introducidos en el segundo parametro a partir del primer parámetro (incluido).
+console.log('El array se ha quedado así:', selectedColors);
+
+
+/* Crear un objeto 'niño' que tenga las propiedades nombre, altura, género
+y amigos. Amigos estará inicialmente vacío y añadiremos posteriormente
+3 elementos con los nombres. También puede perder el último amigo. Después, añadiremos uno extra al inicio*/
+
+let nino = {
+    nombre: 'Jordi',
+    altura: 1.40,
+    genero: 'masculino',
+    amigos: [],
+    perderAmigo() {
+        this.amigos.pop();
+    }
+}
+console.log(nino);
+
+nino.amigos.push('Leo', 'Raul', 'Sonia');
+console.log(nino);
+
+nino.amigos.unshift('Sandrita');
+console.log(nino);
+
+nino.perderAmigo();
+console.log(nino.amigos);
+
+console.clear();
+// ------------------ Condicionales ------------------
+const randomNumber = 9;
+const guessedNumber = '5';
+
+if (randomNumber === guessedNumber) {
+    console.log('Has acertado el número');
+} else if (randomNumber > guessedNumber){
+    console.log('El número secreto es mayor');
+} else {
+    console.log('El número secreto es menor');
+}
