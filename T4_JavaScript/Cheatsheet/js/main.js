@@ -127,14 +127,19 @@ console.log(number, typeof number);
 let person = {       // con las llaves se crean objetos en JS
     name: 'John',
     age: 30,
-    blonde: false,
+    blonde: true,
     walk: function() {
         console.log('Hey, estoy andando');
     }, // Previo a EC6
     jump() {
         console.log('Hey, estoy saltando!');
+    },
+    presentarse() {
+        console.log(`Me llamo ${this.name}, tengo ${this.age} y ${this.blonde ? 'soy rubio' : 'soy moreno.'}`)
     }
 }
+
+person.presentarse();
 
 //Acceso por punto - Dot notation
 console.log(typeof person, person);
@@ -236,6 +241,7 @@ console.log(nino);
 nino.perderAmigo();
 console.log(nino.amigos);
 
+
 console.clear();
 // ------------------ Condicionales ------------------
 const randomNumber = 9;
@@ -248,3 +254,138 @@ if (randomNumber === guessedNumber) {
 } else {
     console.log('El número secreto es menor');
 }
+
+//Ternary Operator
+let variable = 12 < 10 ? 'el primero es menor' : 'el primero es mayor';
+console.log(variable);
+
+
+//Switch
+
+let option = 3;
+switch (option) {
+    case 1:
+        console.log('Option vale 1');
+        break;
+    case 2:
+        console.log('Option vale 2');
+        break;
+    case 3:
+        console.log('Option vale 3'); 
+        break;
+    default:
+        console.log('otra opción');
+        break;
+}
+
+
+console.clear();
+// ------------------ Funciones ------------------
+//Nombradas
+function greet(name, lastName) {
+    console.log(`Hola, ${name} ${lastName}. ¿qué tal?`);
+}
+
+greet();
+greet('Marcos', 'Aurelio');
+
+
+/* Crear función que devuelva el cuadrado de un número que recibe
+por parámetro */ 
+function cuadrado(numero) {
+    return numero*numero;  
+}
+
+console.log(cuadrado(2));
+
+
+//Anónimas
+let numbersArray = [2, 5, 51, 1, 15];
+console.log(numbersArray);
+numbersArray.sort(); //Me lo ordena según ASCII
+console.log(numbersArray);
+
+function orderNumbers(a, b) {
+    if (a < b){
+        return -1;
+    } else if (a === b) {
+        return 0;
+    } else {
+        return 1;
+    } 
+}
+
+numbersArray.sort(orderNumbers); /* Función nombrada */
+console.log(numbersArray);
+
+numbersArray.sort(function (a, b) {return b - a}); /* Función Anónima */
+console.log(numbersArray);
+
+numbersArray.sort((a, b) => a - b); /* Función de flecha */
+console.log(numbersArray);
+
+
+//Arrow Functions
+
+function perimeterOfSquareNormal(side) {              //Función normal
+    return 4 * side;
+}
+
+const perimeterOfSquareAnonima = function (side) {     //Función anónima
+    return side * 4;
+}
+
+const perimeterOfSquareArrow = side => 4*side;       //Arrow Function
+// Si tiene más de un parámetro, debo ponerlos entre paréntesis.
+// Si no tiene parámetros simplemento pongo () => ...
+
+
+console.log(perimeterOfSquareNormal(5));
+console.log(perimeterOfSquareAnonima(5));
+console.log(perimeterOfSquareArrow(5));
+
+
+const square = numero => numero * numero;
+let numero = 5;
+console.log(`El cuadrado de ${num} es ${square(num)}`);
+
+
+console.clear();
+// ------------------ Bucles/Loops ------------------
+//For
+
+for (let i = 0; i <= 10; i++) {
+    console.log(`Índice: ${i}`);
+}
+
+//Definir y rellenar un array con el índice i
+let miArray = [];
+for (let i = 0; i <= 10; i++) {
+    miArray[i] = i;
+    console.log(`Índice: ${i} - ${miArray}`);
+}
+
+console.log(miArray);
+
+let miArray2 = [];  //Esta es la forma correcta!
+for (let i = 0; i <= 10; i++) {
+    miArray2.push(i);
+    console.log(`Índice: ${i} - ${miArray2}`);
+}
+
+console.log(miArray2);
+
+//While
+let contador = 0;
+while(contador<=10) {
+    console.log(contador);
+    contador++;
+}
+
+//ForEach - Se usa como bucle para los arrays
+selectedColors.forEach((value, index) => console.log(`Índice ${index}: ${value}`));
+
+console.log(numbersArray);
+numbersArray.forEach(function (value, index) {
+    console.log(`Índice ${index}: ${value}`);
+})
