@@ -382,10 +382,63 @@ while(contador<=10) {
     contador++;
 }
 
-//ForEach - Se usa como bucle para los arrays
-selectedColors.forEach((value, index) => console.log(`Índice ${index}: ${value}`));
-
+//ForEach - Se usa como bucle para los arrays únicamente.
 console.log(numbersArray);
-numbersArray.forEach(function (value, index) {
-    console.log(`Índice ${index}: ${value}`);
-})
+
+function myFunction (item, index) {
+    console.log(`Índice ${index}: ${item}`);
+}
+numbersArray.forEach(myFunction); //Solo mencionamos la función, no la llamamos!
+
+numbersArray.forEach(
+    function (item, index) { //Con una función anónima
+    console.log(`Índice ${index}: ${item}`);
+}); 
+
+numbersArray.forEach((item, index) => console.log(`Índice ${index}: ${item}`)); //Con una arrow function
+
+
+/* Copiar cada elemento de un array a un nueva array */
+let otherArray = [];
+
+numbersArray.forEach(item => otherArray.push(item));
+console.log(otherArray);
+
+
+//For ... of - Es parecido al forEach pero no accede al index, no exclusivo de arrays
+//Realiza una función para cada valor del iterable que decidamos.
+for (let item of numbersArray) {
+    console.log(item);
+}
+
+for (let item of 'hola') {
+    console.log(item);
+}
+
+//Continue
+for (let i = 0; i < 5; i++){
+    if (i === 3) {
+        continue // Salta a la siguiente iteración
+    }
+    console.log('Using continue', i);
+}
+
+//Break
+let i = 0;
+let k;
+
+mainLoop: while (true) {
+    console.log('Outer loop', i);
+    i++;
+    k = 1;
+    while (true) {
+        console.log('Inner loop, k');
+        k++;
+        if (i === 5 && k === 5) {
+            break mainLoop;              
+        } else if ( k === 5) {
+            break;                    //Para que se pare el bucle cuando k llegue a 5;
+        }      
+    }
+}
+
