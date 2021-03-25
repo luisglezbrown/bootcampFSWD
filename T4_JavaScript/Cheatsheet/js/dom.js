@@ -22,13 +22,85 @@ const parent1 = parents[0];
 const parent2 = document.getElementsByClassName('parent')[1];
 console.log(parent1, parent2);
 
-const children = document.getElementsByClassName('child');
-console.log(children);
+const hijos = document.getElementsByClassName('child');
+console.log(hijos);
 
 let element = document.querySelector('div#grandparent>.parent>div.child#child4')
 console.log(element);
 
-parent1.style.backgroundColor = '#333';
+parent1.style.backgroundColor = 'grey';
+
+let childrens = document.querySelectorAll('.child');
+for (let item of childrens) {
+    item.style.backgroundColor = 'green';
+}
+
+const changeBackground = (element, color) => element.style.backgroundColor = color;
+changeBackground(childrens[0], 'red');
+changeBackground(parent2, 'cyan');
+changeBackground(parent2.children[1], 'whitesmoke');
+
+/* hijos[0].parentNode.style.backgroundColor = 'pink'; */ //.parentNode salta al padre
+parent2.children[1]; //.children[i] selecciona al hijo[indice]
+parent1.children[1].previousElementSibling  /* .previousElementSibling selecciona al hermano anterior, 
+también está .nextElementSibling que selecciona al siguiente hermano.*/
+grandParent.children[1].previousElementSibling.lastElementChild /* .lastElementChild selecciona al último hijo, 
+también está .firstElementChild que selecciona al primer hijo.*/
+
+
+// Properties
+hijos[0].innerHTML = "Child 1v2";
+
+console.log(hijos[0].innerHTML = 'texto v2');
+console.log(hijos[0].textContent = 'texto v2');
+
+
+console.clear();
+console.log('Classlist: ', parent1.classList);
+
+parent1.classList.remove('bg-dark');
+console.log('Classlist: ', parent1.classList);
+
+parent1.classList.add('bg-red');
+console.log('Classlist: ', parent1.classList);
+
+parent1.classList.toggle('rounded'); //Si no la tiene la pone, si la tiene la quita
+console.log('Classlist: ', parent1.classList);
+
+
+parent1.setAttribute('propiedad', 'valor-de-la-propiedad'); //Si existe sobreescribe, si no existe lo crea.
+
+
+//Create / Remove elements
+let myDiv = document.createElement('div');  //Crea el elemento pero no está en el DOM aún
+myDiv.id = 'new-Div';                       //Añado propiedades al elemento creado
+myDiv.classList.add('child');
+myDiv.textContent = 'child 2.5';
+
+parent1.appendChild(myDiv);     //Anexa el elemento creado como hijo a parent1.
+
+myDiv2 = myDiv.cloneNode(true)      //Crea un nuevo nodo igual que el anterior
+parent2.appendChild(myDiv2);        //Si ponemos true, crea el clon incluyendo a los descendientes.
+myDiv2.textContent = "Child 5";
+
+myDiv.remove();   //Elimina el elemento del DOM.
+
+let myDiv3 = myDiv.cloneNode();
+parent2.before(myDiv3);          //Anexa el elemento creado (myDiv3) antes de parent2.
+parent2.after(myDiv.cloneNode()) //Anexa el elemento creado (myDiv.cloneNode()) después de parent2.
+
+
+/* Crear una función que me devuelva un nodo nuevo y que reciba etiqueta e
+ID */
+function newNode(tag, id) {
+    let nodo = document.createElement(tag);
+    nodo.id = id;
+    return nodo;
+}
+
+let newDiv = newNode('div', 'identificador1');
+parent1.appendChild(newDiv);
+parent2.appendChild(newNode('table', 'tabla-ejericio'));
 
 /*Quiero hacer un forEach de family pero no es un array,
 de modo que uso for...of*/
