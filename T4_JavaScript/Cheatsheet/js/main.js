@@ -43,7 +43,7 @@ let hour, minute, second;
 let array = [15, 20, 25];
 console.log(array[0], array[1], array[2]);
 
-let [nombre, apellido, edad] = ['Luis', 'Gonzalez', 37]; // Avanzada
+let [nombre, apellido, edad] = ['Luis', 'Gonzalez', 37];
 console.log(edad, nombre, apellido);
 console.log(`Mi nombre es ${nombre}, mi apellido es ${apellido} y tengo ${edad} años.`)
 
@@ -441,4 +441,3 @@ mainLoop: while (true) {
         }      
     }
 }
-

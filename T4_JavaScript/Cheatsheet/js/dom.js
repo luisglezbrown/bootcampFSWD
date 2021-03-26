@@ -102,6 +102,53 @@ let newDiv = newNode('div', 'identificador1');
 parent1.appendChild(newDiv);
 parent2.appendChild(newNode('table', 'tabla-ejericio'));
 
+
+//Events
+const colorButton = document.getElementsByTagName('button')[0]; //[0] porque el "getElements" me devuelve un array.
+colorButton.addEventListener('click', function (event) {
+    console.log(event);
+    console.log(event.target);
+    document.body.classList.toggle('bg-red'); //document.body selecciona directamente el elemento body. 
+    console.log(event.target.tagName);
+    console.log(`X: ${event.clientX} | Y: ${event.clientY}`);
+    console.log(`Alt: ${event.altKey} | Shift: ${event.shiftKey} | Ctrl: ${event.ctrlKey}`);
+
+});
+
+const emailInput = document.querySelector('#emailInput');
+
+emailInput.addEventListener('focus', inputListener);
+emailInput.addEventListener('blur', inputListener);
+
+function inputListener(e) {
+    console.log('tipo de evento: ', e.type);
+    if (e.type === 'focus') {
+        e.target.classList.add('bg-red');
+    } else if (e.type === 'blur') {
+        e.target.classList.remove('bg-red');
+    }
+}
+
+const changeTitle = e => {
+    document.querySelectorAll('h1')[2].textContent = emailInput.value;
+}
+
+emailInput.addEventListener('keydown', inputListener);
+emailInput.addEventListener('keyup', changeTitle);
+
+const container = document.getElementById('container');
+container.addEventListener('mouseover', inputListener);
+container.addEventListener('mouseout', inputListener);
+
+function coords (e) {
+    const h1 = document.querySelectorAll('h1')[3];
+    h1.textContent = `X: ${e.clientX} | Y: ${e.clientY}`;
+}
+
+document.body.addEventListener('mousemove', coords);
+
+
+
 /*Quiero hacer un forEach de family pero no es un array,
 de modo que uso for...of*/
 // for (let familyMember of family) {
