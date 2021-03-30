@@ -272,3 +272,120 @@ console.log(concatenador('Jesús está pidiendo memes. ', 5));
 /* 19. Crea una función que recibe un objeto con dos campos, votos positivos y votos negativos y que devuelva
 la cuenta final. */
 console.log('***** Apartado 19 *****');
+const getVoteCount = object => object.upVotes - object.downVotes;
+let votacion = {upVotes: 35, downVotes: 15};
+
+console.log(getVoteCount(votacion));
+
+
+/* 20. Crea una función que recibe un array de tipos de datos mezclados y que devuelva otro array con el tipo
+de cada uno de los elementos. */
+console.log('***** Apartado 20 *****');
+
+function getTypes (array) {
+    const type = element => typeof element;
+    return array.map(type);
+}
+
+console.log(getTypes(["I'm learning JS in a Bootcamp 🚀", 7.5, {}, 0, undefined, [], "codespace"]));
+
+
+/* 21. Función que dado un array de números con formato string devuelva un array con los números ya
+parseados. */
+console.log('***** Apartado 21 *****');
+
+function getParsedNumbers(arrayDeStrings) {
+    const parsing = element => Number(element);
+    return arrayDeStrings.map(parsing);
+}
+
+console.log(getParsedNumbers(["1.5", "10", "0"]));
+
+
+/* 22. Crea una función de flecha que devuelva “Positivo” si el número que recibe por argumento es mayor o
+igual que cero y “Negativo” en caso contrario. Usa el operador ternario. */
+console.log('***** Apartado 22 *****');
+
+const posOrNeg = num => num >= 0 ? 'Positivo' : 'Negativo';
+
+console.log(posOrNeg(5));
+console.log(posOrNeg(0));
+console.log(posOrNeg(-5));
+
+
+/* 23. Crea una función que dado un array cualquiera y un índice, borre el elemento guardado en ese índice. */
+console.log('***** Apartado 23 *****');
+
+const deleteInIndex = (array, index) => {
+    let newArray = array;
+    newArray.splice(index, 1);
+    return newArray;
+};
+
+let pruebaApt23 = ['index 0', 52, 'me van a borrar', true, []];
+console.log(deleteInIndex(pruebaApt23, 2));
+
+
+/* 24. Usando la función del apartado anterior, crea otra función que dado un array de números y un número a
+filtrar, devuelva un array borrando todos las apariciones de dicho número. */
+console.log('***** Apartado 24 *****');
+
+
+/* 25. Crea dos funciones que recibirán un objeto, la primera devolverá un array con los nombres de todas sus
+propiedades. La segunda devolverá un array con los valores de dichas propiedades.
+Investigar los métodos keys y values del prototipo de Object. */
+console.log('***** Apartado 25 *****');
+
+const objectKeys = object => {
+    return Object.keys(object);
+};
+
+const objectValues = object => {
+    return Object.values(object);
+};
+
+let pruebaApt25 = {key1: 'value1', key2: 'value2', key3: 'value3'};
+console.log(objectKeys(pruebaApt25));
+console.log(objectValues(pruebaApt25));
+
+
+/* 26. Crea una función que invierta un string. */
+console.log('***** Apartado 26 *****');
+
+const stringReverse = string => {
+    let reversed = '';
+    for (let char of string) {
+        reversed = char.concat(reversed);
+    }
+    return reversed;
+};
+
+console.log(stringReverse(".nóicamargorp ed sedrat sal ne éfac led érasuba oN"));
+console.log(stringReverse(pruebaApt12));
+
+
+/* 27. Crea una función que compare strings sin tener en cuenta las mayúsculas / minúsculas. */
+console.log('***** Apartado 27 *****');
+
+const compareStrings = (string1, string2) => string1.toLowerCase() === string2.toLowerCase() ? true : false;
+
+console.log(compareStrings("Darth CODER", "darth coder"));
+
+pruebaApt27Min = 'prueba pruebita';
+pruebaApt27May = 'PRUEBA PRUEBITA';
+console.log(compareStrings(pruebaApt27Min, pruebaApt27May), pruebaApt27May);
+
+
+/* 28. Crea una función que convierta en mayúscula sólo la primera letra de cada palabra de un string dado. El
+apartado 11 será de ayuda. Investigar cómo unir un array de strings en un único string. */
+
+
+/* 29. Crea una función en una única línea que reciba un valor lógico y devuelva el opuesto. */
+const bangFn = boolean => !boolean;
+
+console.log(bangFn(true));
+console.log(bangFn(false));
+console.log(bangFn(1 === 1));
+console.log(bangFn(''));
+console.log(bangFn(0));
+console.log(bangFn(!0));
