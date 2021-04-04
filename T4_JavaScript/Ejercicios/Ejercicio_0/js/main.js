@@ -336,13 +336,8 @@ propiedades. La segunda devolverá un array con los valores de dichas propiedade
 Investigar los métodos keys y values del prototipo de Object. */
 console.log('***** Apartado 25 *****');
 
-const objectKeys = object => {
-    return Object.keys(object);
-};
-
-const objectValues = object => {
-    return Object.values(object);
-};
+const objectKeys = object => Object.keys(object);
+const objectValues = object => Object.values(object);
 
 let pruebaApt25 = {key1: 'value1', key2: 'value2', key3: 'value3'};
 console.log(objectKeys(pruebaApt25));
@@ -354,11 +349,15 @@ console.log('***** Apartado 26 *****');
 
 const stringReverse = string => {
     let reversed = '';
-    for (let char of string) {
-        reversed = char.concat(reversed);
+    for (let character of string) {
+        reversed = character.concat(reversed);
     }
     return reversed;
 };
+
+function stringReverseLoli (string) {
+    string.split('').reverse().join('');
+}
 
 console.log(stringReverse(".nóicamargorp ed sedrat sal ne éfac led érasuba oN"));
 console.log(stringReverse(pruebaApt12));
@@ -368,7 +367,6 @@ console.log(stringReverse(pruebaApt12));
 console.log('***** Apartado 27 *****');
 
 const compareStrings = (string1, string2) => string1.toLowerCase() === string2.toLowerCase() ? true : false;
-
 console.log(compareStrings("Darth CODER", "darth coder"));
 
 pruebaApt27Min = 'prueba pruebita';
@@ -378,6 +376,30 @@ console.log(compareStrings(pruebaApt27Min, pruebaApt27May), pruebaApt27May);
 
 /* 28. Crea una función que convierta en mayúscula sólo la primera letra de cada palabra de un string dado. El
 apartado 11 será de ayuda. Investigar cómo unir un array de strings en un único string. */
+console.log('***** Apartado 28 *****');
+
+function capitalize(string) {
+    let upperCheck = true;
+    let capitalizedString = '';
+
+    for (const character of string) {
+        
+        if (upperCheck) {
+            capitalizedString = capitalizedString.concat('', character.toUpperCase());
+        } else {
+            capitalizedString = capitalizedString.concat('', character.toLowerCase());
+        };
+
+        character === ' ' ? upperCheck = true : upperCheck = false;
+    }
+    
+    return capitalizedString;
+}
+
+console.log(capitalize("comprobaré los errores de la consola antes de pedir ayuda."));
+
+let pruebaApt28 = 'Esto ES oTRa prueBa pARA COMPROBAR sI FuncIona CorrecTAMENTe mi FUNCIÓn :)'
+console.log(capitalize(pruebaApt28));
 
 
 /* 29. Crea una función en una única línea que reciba un valor lógico y devuelva el opuesto. */
