@@ -30,6 +30,10 @@ function booleanChecker(argumento) {
     }
 }
 
+function booleanCheckerJesus(argumento) {
+    return typeof argumento === 'boolean';
+}
+
 let pruebaApt3 = 5;
 console.log(booleanChecker(pruebaApt3));
 
@@ -211,6 +215,8 @@ function strictEquality (atr1, atr2) {
     }
 }
 
+const strictEqualityJesus = (param1, param2) => param1 == param2 && typeof param1 == param2;
+
 console.log(strictEquality("5", 5));
 console.log(strictEquality(8, 5)); 
 console.log(strictEquality(5, 5)); 
@@ -325,11 +331,24 @@ const deleteInIndex = (array, index) => {
 let pruebaApt23 = ['index 0', 52, 'me van a borrar', true, []];
 console.log(deleteInIndex(pruebaApt23, 2));
 
+const removeItem = (array, index) => array.splice(index, 1);
+
 
 /* 24. Usando la función del apartado anterior, crea otra función que dado un array de números y un número a
 filtrar, devuelva un array borrando todos las apariciones de dicho número. */
 console.log('***** Apartado 24 *****');
 
+const filterNumber = (array, numberToFilter) => {
+    array.forEach((element, index) => {
+        if (element === numberToFilter) {
+            removeItem(array, index);
+        } 
+    });
+};
+
+let pruebaApt24 = [5, 6, 7, 8, 5, 9];
+filterNumber(pruebaApt24, 5);
+console.log(pruebaApt24);
 
 /* 25. Crea dos funciones que recibirán un objeto, la primera devolverá un array con los nombres de todas sus
 propiedades. La segunda devolverá un array con los valores de dichas propiedades.
