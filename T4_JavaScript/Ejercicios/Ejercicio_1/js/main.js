@@ -30,6 +30,17 @@ lis[0].addEventListener('click', () => myImg.src = lis[0].innerText);
 lis[1].addEventListener('click', () => myImg.src = lis[1].innerText);
 lis[2].addEventListener('click', () => myImg.src = lis[2].innerText);
 
+/* const changeImage = e => image.src = e.target.textContent;
+lis[0].addEventListener('click', changeImage);
+lis[1].addEventListener('click', changeImage);
+lis[2].addEventListener('click', changeImage); */
+
+/* const list = document.querySelector("ul");
+const image = document.querySelector("img");
+
+const changeImage = e => image.src = e.target.textContent;
+
+list.addEventListener("click", changeImage); */
 
 /* Apartado 4 - Añadir un input de tipo texto y un botón. Al pulsar el botón debe escribirse el texto del input en un párrafo. */
 const inputApt4 = document.getElementById('inputApt4');
@@ -51,7 +62,7 @@ function copyText4b() {
     paragraphApt4b.textContent = inputApt4b.value;
 }
 
-inputApt4b.addEventListener('keydown', copyText4b);
+inputApt4b.addEventListener('input', copyText4b);
 
 
 /* 5. De forma similar al anterior, pero para un textarea y validará si lo introducido es mayor de 15 caracteres */
