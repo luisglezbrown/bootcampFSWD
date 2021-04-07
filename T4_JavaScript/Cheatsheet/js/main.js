@@ -185,6 +185,38 @@ person2.talk();
 person3.talk();
 
 
+// Object Constructor using functions
+function Car(brand, color, weigth, topSpeed) {
+    this.brand = brand;
+    this.color = color;
+    this.weigth = weigth;
+    this.topSpeed = topSpeed;
+    this.getDescription = function (params) {
+        return `This ${this.color} ${this.brand} weigths ${this.weigth} kilos` + 
+        ` and can reach up to ${this.topSpeed} kms/h`;
+    }
+}
+
+const car1 = new Car('Mercedes', 'red', 120, 200);
+const car2 = new Car('Seat', 'white', undefined, 180);
+const car3 = new Car('Ford', 'black', 1500, 175);
+
+console.log(car1, car2, car3);
+console.log(car3.getDescription());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 console.clear();
 // ------------------ Arrays ------------------
 let selectedColors = ['red', 'blue'];
