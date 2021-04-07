@@ -169,27 +169,68 @@ const inputApt11 = document.getElementById('inputApt11');
 const buttonApt11 = document.getElementById('buttonApt11');
 let numbersList = [1, 15, 20, 35, 78];
 
-for (let index = 0; index < numbersList.length; index++) {
-    newLi = document.createElement('li');
-    newLi.textContent = `${numbersList[index]}`;
-    ulApt11.appendChild(newLi);
+function fillList () {
+    ulApt11.innerHTML = "";
+    for (let index = 0; index < numbersList.length; index++) {
+        newLi = document.createElement('li');
+        newLi.textContent = `${numbersList[index]}`;
+        ulApt11.appendChild(newLi);
+    }
 }
 
 function addToList () {
-    numberToJoin = Number(inputApt11.value);
+    let numberToJoin = Number(inputApt11.value);
     if (numbersList.indexOf(numberToJoin) === -1) {
         numbersList.push(numberToJoin);
-        newLi = document.createElement('li');
-        newLi.textContent = `${numberToJoin}`;
-        ulApt11.appendChild(newLi);
+        fillList();
     } else {
         window.alert('Ooops! El número ya está en la lista');
     }
 }
 
+fillList();
 buttonApt11.addEventListener('click', addToList);
 
 
-/* 12.Crearemos una clase .btnen CSS que le de ciertos estilos a un botón. 
+/* 12.Crearemos una clase .btn en CSS que le de ciertos estilos a un botón. 
 Al hacer clicken el botón haremos “toggle” o alternaremos esa clase, es decir, 
 si está presente la quitaremos y si no está, la añadiremos. */
+document.querySelector('#toggler').onclick = event => event.target.classList.toggle('btn');
+
+
+/* Refactorizar */
+let buttons = document.getElementsByClassName('btn-red'); // Devuelve HTMLCollection
+
+buttons[0].addEventListener('click', () => {
+    buttons[0].style.backgroundColor = "red";
+});
+
+buttons[1].addEventListener('click', () => {
+    buttons[1].style.backgroundColor = "red";
+});
+
+buttons[2].addEventListener('click', () => {
+    buttons[2].style.backgroundColor = "red";
+});
+
+//Solución 1
+// Convierte el HTMLCollection en un array y le aplicamos un forEach.
+// El button equivale a item, aplicamos un evento a cada button.
+Array.from(buttons).forEach(button => {
+    button.onclick = event => {
+        event.target.style.backgroundColor = 'red';
+    }
+}); 
+
+//Solución 2
+let buttons = document.querySelectorAll('.btn-red'); // Devuelve NodeList.
+
+//como el selector devuelve un NodeList, no tengo que convertir a array porque
+// el forEach está disponible.
+
+buttons.forEach(button => {
+    button.onclick = event => {
+        event.target.style.backgroundColor = 'red';
+    }
+});
+
