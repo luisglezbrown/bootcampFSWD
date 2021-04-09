@@ -185,6 +185,19 @@ person2.talk();
 person3.talk();
 
 
+// How to copy an object
+let obj1 = {property: 5};
+let obj2 = obj1; //No es una copia!! Es el mismo objeto referenciado.
+
+obj2 = {...obj1}; //Copia superficial que usaremos prácticamente siempre.
+obj2.property = 10;
+let obj3 = {otherProperty: 7, ...obj2};
+
+let obj4 = JSON.parse(JSON.stringify(obj1)) // Copia profunda o total.
+
+console.log(obj1, obj2, obj3, obj4);
+
+
 // Object Constructor using functions
 function Car(brand, color, weigth, topSpeed) {
     this.brand = brand;
@@ -203,18 +216,6 @@ const car3 = new Car('Ford', 'black', 1500, 175);
 
 console.log(car1, car2, car3);
 console.log(car3.getDescription());
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 console.clear();
