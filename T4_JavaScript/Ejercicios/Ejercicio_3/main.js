@@ -15,7 +15,7 @@ const generadorSalario = () => Math.floor(Math.random() * (4000 - 1250) + 1250);
 // console.log(generadorSalario());
 
 
-const empleados = [];
+let empleados = [];
 for (let index = 1; index <= 100; index++) {
     empleados.push(new Empleados(
         `Empleado ${index}`,
@@ -48,21 +48,20 @@ console.log('Ordenados por número de empleado decreciente:', empleados);
 
 /* 5. Usando filter: imprimir el cargo y salario de los que cobren más de 2500€. */
 const salariosMayores2500 = empleados.filter(empleado => empleado.salario > 2500);
-console.log('Filtrados por los que cobrán más de 2500:', salariosMayores2500);
+console.log('Filtrados por los que cobrán más de 2500:');
+salariosMayores2500.forEach(empleado => console.log(empleado.cargo, empleado.salario))
 
 
-/* 6. Usando map: subir el sueldo un 25% a los que cobren menos de 1500€ y volver a hacer el punto 5. */
-
-function subirSalario (empleado) {
-    for (const key in empleado) {
-        if (empleado.salario < 1500) {
-            empleado.salario *= 1.25
-        }
+/* 6. Usando map: subir el sueldo un 25% a los que cobren menos de 1500€ */
+empleados = empleados.map(empleado => {
+    if (empleado.salario < 1500) {
+        // Modificar el salario
+        empleado.salario *= 1.25;
     }
-}
+    return empleado;
+});
 
-empleados.map(subirSalario);
-console.log('Empleados tras subida salarial a los under1500', empleados.filter(empleado => empleado.salario > 2500));
+console.log('Empleados tras subida salarial a los under1500', empleados);
 
 
 /* 7. Usando reduce: Obtener el coste total de todos los sueldos para la empresa teniendo en cuenta que
@@ -82,6 +81,10 @@ const costeSalarial = totalSalarios() * impuestos;
 console.log(`Salarios antes de impuestos: ${totalSalarios()} | Coste Salarial: ${costeSalarial}`);
 
 
+// v2
+const costeTotal = empleados.reduce((sumaSalarios, empleado) => sumaSalarios + empleado.salario * 1.15, 0);
+console.log(costeTotal);
+
 /* 8. Usar el método o métodos (reduce / map / filter / sort) que determinemos oportuno e imprimir en
 cada apartado: */
 
@@ -89,10 +92,31 @@ cada apartado: */
 const empleadosBajoRendimiento = empleados.filter(empleado => empleado.rendimiento < 0.3);
 console.log('Empleados a despedir por bajo rendimiento', empleadosBajoRendimiento);
 
+empleados = empleados.filter(empleado => empleado.rendimiento >= 0.3);
+console.log('Empleados tras despedir a los flojos', empleados, empleados.length);
+
 
 // • Calcular el sueldo medio de la empresa.
 const sueldoMedio = totalSalarios() / empleados.length;
 console.log(`El sueldo medio de la empresa es de ${sueldoMedio}`);
 
+const sueldoMedioV2 = empleados.reduce((sumaSalarios, empleado) => sumaSalarios +empleado.salario, 0) / empleados.length;
+console.log(`El sueldo medio de la empresa usando V2 es de ${sueldoMedioV2}`);
+
 
 //• Subir el sueldo de los que tengan un rendimiento superior a 0.7.
+empleados = empleados.map(empleado => {
+    if (empleado.rendimiento > 0.7) {
+        empleado.salario = empleado.salario * 1.25;
+    }
+    return empleado;
+});
+console.log('Empleados tras la subida salaria a los de mejor rendimiento.');
+
+
+empleados.forEach(empleado => {
+    if (empleado.rendimiento > 0.7) {
+        empleado.salario = empleado.salario * 1.25;
+    }
+});
+console.log('Empleados tras la subida salaria a los de mejor rendimiento.');
