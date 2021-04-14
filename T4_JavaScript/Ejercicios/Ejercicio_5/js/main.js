@@ -45,7 +45,7 @@ function fillList() {
     booksToDisplay = books.filter(book => book.title.toLowerCase().includes(inputFilter.value.toLowerCase()))
 
     for (let index = 0; index < books.length; index++) {
-        books[index].id = index+1;
+        booksToDisplay[index].id = index+1;
     }
 
     for (const book of booksToDisplay) {
