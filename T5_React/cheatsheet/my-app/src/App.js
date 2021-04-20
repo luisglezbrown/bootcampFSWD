@@ -1,13 +1,14 @@
 import './App.css';
-import FirstComponent from './components/FirstComponent';
+import FirstComponent, {SecondComponent, ThirdComponent} from './components/FirstComponent';
+// Los default se importan sin llaves, mientras que el resto lleva llaves.
 
 function App() {
   return (
     <div className="App">
-      <FirstComponent />
-      <FirstComponent />
-      <FirstComponent />
-      <FirstComponent />
+      <FirstComponent title='Título enviado desde el padre' date='20 de abril de 2021'/>
+      <FirstComponent title='Otro título desde el padre' />
+      <SecondComponent />
+      <ThirdComponent />
 
     </div>
   );
