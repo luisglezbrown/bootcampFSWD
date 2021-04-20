@@ -22,9 +22,9 @@ export default function Tienda() {
 
     return (
         <div>
-            <Lista categoria='electronica' productos={tienda.electronica}/>
-            <Lista />
-            <Lista />
+            <Lista categoria='Electrónica' productos={tienda.electronica}/>
+            <Lista categoria='Alimentación' productos={tienda.alimentacion}/>
+            <Lista categoria='Mascotas' productos={tienda.mascotas}/>
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import './App.css';
+
 import Tienda from './components/Tienda'
 
 function App() {
