@@ -8,12 +8,11 @@ export default function Lista(props) {
                     <li className="list-group-item" key={producto.id}>
                         Producto: {producto.producto}, 
                         Marca: {producto.marca}
-                        &nbsp; {producto.modelo}
-                        , Precio: {producto.precio}
+                        {producto.modelo ? ', Modelo: ' + producto.modelo : ''},
+                        Precio: {producto.precio} €
                     </li>
                 )}
             </ul> 
-                       
         </div>
     )
 }
