@@ -1,4 +1,5 @@
 import { Fragment } from 'react';
+import PropTypes from 'prop-types';
 
 // Los props se reciben como argumentos de la función;
 export default function FirstComponent(props) {
@@ -16,14 +17,22 @@ export default function FirstComponent(props) {
     )
 }
 
+// defaultProps se recomienda especialmente para los arrays
 FirstComponent.defaultProps = {
-    title: 'Sin título',
+    // title: 'Sin título',
     date: 'Sin fecha',
+    products: [],
 }
 
+// propTypes debe ser importado (ver arriba)
+// Sirve para definir el tipo de elemento que debe recibir props.
+FirstComponent.propTypes = {
+    title: PropTypes.string.isRequired, // Ojo, no tiene sentido si la propiedad tiene un defaultProps
+    date: PropTypes.string,
+    products: PropTypes.array,
+}
 
 // Solo se puede tener un export default por archivo.
-
 function SecondComponent() {
     return (
         <>
