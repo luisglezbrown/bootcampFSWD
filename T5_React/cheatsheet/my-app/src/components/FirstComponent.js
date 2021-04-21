@@ -4,15 +4,26 @@ import PropTypes from 'prop-types';
 // Los props se reciben como argumentos de la función;
 export default function FirstComponent(props) {
 
-    console.log(props, typeof props);
-    console.log(props.title);
+    // console.log(props, typeof props);
+    // console.log(props.title);
+
+    const myFunction = function (bookID) {
+        return (evento) => console.log(bookID, evento.target);
+    }
+
+    const mySimpleFunction = function (evento) {
+        console.log(evento);
+    }
 
     return (
         <div>
             <h3>{props.title}</h3>
             <small>{props.date}</small>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique amet nam aut laudantium ad reiciendis?</p>
-            <button>Click me!</button>
+            <button onClick={myFunction(1)}>Eliminar Book1</button>
+            <button onClick={myFunction(2)}>Eliminar Book2</button>
+            <button onClick={mySimpleFunction}>Click me!</button>
+            <button onClick={() => evento => console.log(1, evento)}>Toda la gestión inline</button>       
         </div>
     )
 }
