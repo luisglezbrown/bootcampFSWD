@@ -1,4 +1,5 @@
 import Agenda from './components/Agenda'
+import Formulario from './components/Formulario'
 
 let contactos = [
   {nombre: 'David', apellidos: 'García Merino', direccion: 'Alcalá, 236', ciudad: 'Madrid', cp: 28028, telefono: 600696969},
@@ -10,6 +11,7 @@ function App() {
   return (
     <div className="App">
       <Agenda contactos={contactos}/>
+      <Formulario />
     </div>
   );
 }
