@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <FirstComponent title='Título enviado desde el padre' date='20 de abril de 2021'/>
-      <FirstComponent title='Otro título desde el padre' />
+      <FirstComponent />
       <SecondComponent />
       <ThirdComponent />
 

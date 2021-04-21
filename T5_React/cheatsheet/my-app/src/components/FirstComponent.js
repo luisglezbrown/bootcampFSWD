@@ -9,11 +9,18 @@ export default function FirstComponent(props) {
     return (
         <div>
             <h3>{props.title}</h3>
-            <small>{props.date ? props.date : 'No hay fecha'}</small>
+            <small>{props.date}</small>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique amet nam aut laudantium ad reiciendis?</p>
+            <button>Click me!</button>
         </div>
     )
 }
+
+FirstComponent.defaultProps = {
+    title: 'Sin título',
+    date: 'Sin fecha',
+}
+
 
 // Solo se puede tener un export default por archivo.
 
