@@ -16,7 +16,7 @@ function App() {
  
   return (
     <div className="App">
-      <Agenda contactos={contactos}/>
+      <Agenda contactos={contactos} setContactos={setContactos}/>
       <Formulario setContactos={setContactos}/> 
       {/* Para añadir el nuevo contacto debo hacerlo con setContactos, por eso lo paso como props */}
     </div>

@@ -1,6 +1,11 @@
 import React from 'react'
 
-export default function Agenda({contactos}) {
+export default function Agenda({setContactos, contactos}) {
+
+    function deleteContacto(evento) {
+        setContactos(currentContactos => currentContactos.filter(contacto => contacto.telefono !== Number(evento.target.id)))
+    }
+
     return (
         
         <div className="container mt-3">
@@ -16,7 +21,7 @@ export default function Agenda({contactos}) {
                         <li className="list-group-item">{telefono}</li>
                         <li className="list-group-item">{direccion}, {cp}, {ciudad}</li>
                         <li className="list-group-item">
-                            <button type="button" className="btn btn-warning">Eliminar</button>
+                            <button type="button" className="btn btn-warning" id={telefono} onClick={deleteContacto}>Eliminar</button>
                         </li>
                     </ul>)
                     })
