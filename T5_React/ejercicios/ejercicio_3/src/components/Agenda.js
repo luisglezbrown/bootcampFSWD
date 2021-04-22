@@ -3,7 +3,7 @@ import React from 'react'
 export default function Agenda({setContactos, contactos}) {
 
     function deleteContacto(evento) {
-        setContactos(currentContactos => currentContactos.filter(contacto => contacto.telefono !== Number(evento.target.id)))
+        setContactos(currentContactos => currentContactos.filter(contacto => contacto.telefono !== evento.target.id))
     }
 
     return (
