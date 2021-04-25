@@ -16,7 +16,7 @@ export default function NewToDoInput({toDoList, setToDoList}) {
 
       setToDoList([newTask, ...toDoList]);
 
-      setTitle('');
+      evento.target.reset();
   }
 
   return (
