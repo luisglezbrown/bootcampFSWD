@@ -1,4 +1,5 @@
 import React from 'react'
+import './ToDoList.css'
 
 export default function ToDoList({toDoList, setToDoList}) {
 
@@ -18,8 +19,7 @@ export default function ToDoList({toDoList, setToDoList}) {
         <div>
             <ul class="list-group mb-5">
                 {toDoList.map((toDo, index) => 
-                    // eslint-disable-next-line no-undef
-                    <li className={toDo.completed? 'list-group-item list-group-item-secondary' : "list-group-item"} key={index} onClick={evento => completedToggle(evento, index)}>
+                    <li className={`list-group-item ${toDo.completed && 'list-group-item-secondary completed' }`}  key={index} onClick={evento => completedToggle(evento, index)}>
                         {index+1} - {toDo.title}
                         <button className='btn btn-danger float-right' onClick={removeToDo(toDo.title)}>X</button>
                     </li>                                  
