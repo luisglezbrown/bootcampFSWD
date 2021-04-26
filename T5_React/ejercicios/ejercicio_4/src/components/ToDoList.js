@@ -4,10 +4,11 @@ import './ToDoList.css'
 export default function ToDoList({toDoList, setToDoList}) {
 
     const completedToggle = (evento, index) => {
+        if (evento.target.tagName !== 'BUTTON'){
         const newToDoList = [...toDoList];
         newToDoList[index].completed = !newToDoList[index].completed;
 
-        setToDoList(newToDoList);
+        setToDoList(newToDoList);}
     };
 
     const removeToDo = title => {

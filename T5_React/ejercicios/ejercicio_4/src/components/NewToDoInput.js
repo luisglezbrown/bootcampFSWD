@@ -16,12 +16,17 @@ export default function NewToDoInput({toDoList, setToDoList}) {
 
       setToDoList([newTask, ...toDoList]);
 
-      evento.target.reset();
+      setTitle('');
   }
 
   return (
         <form onSubmit={submit}>
-            <input className='form-control my-4' type='text' onChange={handleTitle} placeholder='Introduce un nuevo To-do'></input>
+          <input  className='form-control my-4' 
+                  type='text' 
+                  onChange={handleTitle} 
+                  placeholder='Introduce un nuevo To-do'
+                  value ={title}>
+          </input>
         </form>
     )
 }
