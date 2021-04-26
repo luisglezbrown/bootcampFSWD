@@ -1,10 +1,15 @@
+// Los default se importan sin llaves, mientras que el resto lleva llaves.
 import './App.css';
 import FirstComponent, {SecondComponent, ThirdComponent } from './components/FirstComponent';
 import Counter from './components/Counter'
-import UseEffectComponent from './components/UseEffectComponent';
-import { useState } from 'react';
 
-// Los default se importan sin llaves, mientras que el resto lleva llaves.
+import UseEffectComponent from './components/UseEffectComponent';
+import UseContextComponent from './components/UseContextComponent';
+
+import { useState, createContext } from 'react';
+
+// Los UseContext se realizan fuera de la función principal
+export const GlobalContext = createContext();
 
 function App() {
 
@@ -12,14 +17,18 @@ function App() {
 
   return (
     <div className="App">
-{/*       <Counter />
+      {/* <Counter />
       <FirstComponent title='Título enviado desde el padre' date='20 de abril de 2021'/>
       <FirstComponent title='Título'/>
       <SecondComponent />
-      <ThirdComponent /> */}
+      <ThirdComponent />
       {show && <UseEffectComponent />}
-      <button onClick={() => setShow(!show)}>Show component</button>
-
+      <button onClick={() => setShow(!show)}>Show component</button> */}
+      
+      <GlobalContext.Provider value='Soy un string guardado en un contexto'>
+        <UseContextComponent />
+      </GlobalContext.Provider>
+      
 
     </div>
   );
