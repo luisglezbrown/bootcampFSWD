@@ -7,6 +7,7 @@ import UseEffectComponent from './components/UseEffectComponent';
 import UseContextComponent from './components/UseContextComponent';
 
 import { useState, createContext } from 'react';
+import Router from './Router'
 
 // Los UseContext se realizan fuera de la función principal
 export const GlobalContext = createContext();
@@ -23,13 +24,13 @@ function App() {
       <SecondComponent />
       <ThirdComponent />
       {show && <UseEffectComponent />}
-      <button onClick={() => setShow(!show)}>Show component</button> */}
+      <button onClick={() => setShow(!show)}>Show component</button> 
       
       <GlobalContext.Provider value='Soy un string guardado en un contexto'>
         <UseContextComponent />
-      </GlobalContext.Provider>
+      </GlobalContext.Provider>*/}
       
-
+      <Router />
     </div>
   );
 }

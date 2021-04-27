@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 
 
+
+
 export default function Counter() {
 
     // Aquí hacemos una deconstrucción del array con dos
