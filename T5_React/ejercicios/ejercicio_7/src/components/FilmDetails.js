@@ -23,7 +23,7 @@ export default function FilmDetails() {
                     <h1 className='mainHeader'>{filmData?.title}</h1>
                     <p className='tagline'>{filmData?.tagline}</p>
                     <p><span className='infoTag'> estreno: </span>{filmData?.release_date}</p>
-                    <p>{/* {filmData?.genres} */}</p>
+                    {/* <p><span className='infoTag'> género: </span>{filmData.genres}</p> */}
                     <p><span className='infoTag'> resumen: </span>{filmData?.overview}</p>
                     <p className='average'>{filmData?.vote_average} / 10</p>
                     <a className='toTMDb' href={`${TMDB_URL}${id}`} target='_blank' rel='noreferrer'>

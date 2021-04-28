@@ -21,6 +21,9 @@ code {
   text-transform: uppercase;
 }
 
+
+/* ----- UpcomingFilms ----- */
+
 .upcomingFilmsContainer {
   display: flex;
   flex-wrap: wrap;
@@ -90,24 +93,8 @@ code {
   color: #032541;
 }
 
-footer {
-  width: 100%;
-  background-color: #032541;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
 
-footer img {
-  height: 3rem;
-  margin: 1rem;
-}
-
-footer p {
-  color: whitesmoke;
-  font-size: 3rem;
-}
-
+/* ----- Film Details ----- */
 
 .filmDetailContainer {
   display: flex;
@@ -165,3 +152,25 @@ img.buttonToTMDb {
   height: 2rem;
   border-radius: 0;
 }
+
+
+/* ----- Footer ----- */
+
+footer {
+  width: 100%;
+  background-color: #032541;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+footer img {
+  height: 3rem;
+  margin: 1rem;
+}
+
+footer p {
+  color: whitesmoke;
+  font-size: 3rem;
+}
+
