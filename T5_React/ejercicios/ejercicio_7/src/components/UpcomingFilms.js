@@ -27,12 +27,12 @@ export default function UpcomingFilms() {
                     const shortenOverview = `${overview.split('. ', 1).join(' ')} [...]`;
 
                     return   (
-                    <div className="filmCard">
+                    <div className="filmCard" key={id}>
                         <img className='posterImg' src={`${POSTER_BASE_URL}${poster_path}`} alt={`Póster de ${title}`}/>
                         <h2 className="title">{title}</h2>
-                        <p>Descripción: {overview.length > overviewMaxCharacters ? shortenOverview  : overview}</p>
-                        <p>Fecha de estreno: {release_date}</p>
-                        <button type="button" className="seeMoreButton" id={id} onClick={handleClick}>Ver más</button>
+                        <p><span className='infoTag'>Descripción: </span> {overview.length > overviewMaxCharacters ? shortenOverview  : overview}</p>
+                        <p><span className='infoTag'>Fecha de estreno: </span> {release_date}</p>
+                        <button type="button" className="seeMoreButton" id={id} onClick={handleClick}>+</button>
                         
                     </div>)
                 })}            

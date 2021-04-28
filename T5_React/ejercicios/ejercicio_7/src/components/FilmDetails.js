@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-import { POSTER_BASE_URL, FILM_DETAIL_URL, FILM_DETAIL_URL_SUFFIX, TMDB_URL } from '../Settings';
+import { POSTER_BASE_URL, FILM_DETAIL_URL, FILM_DETAIL_URL_SUFFIX, TMDB_URL, LOGO_TMBD_BOTON_URL } from '../Settings';
 
 export default function FilmDetails() {
 
@@ -15,16 +15,22 @@ export default function FilmDetails() {
     }, [id]);
 
     return (
-        <div>
-            <img src={`${POSTER_BASE_URL}${filmData?.poster_path}`} alt={`Póster de ${filmData?.title}`}/>
-            <h1>{filmData?.title}</h1>
-            <p>{filmData?.tagline}</p>
-            <p>{filmData?.release_date}</p>
-            <p>{/* {filmData?.genres} */}</p>
-            <p>{filmData?.overview}</p>
-            <p>{filmData?.vote_average} / 10</p>
-            <p><a href={`${TMDB_URL}${id}`}>Ver en TMDB</a></p>
-
-        </div>
+        <>
+            
+            <div className='filmDetailContainer'>
+                <img src={`${POSTER_BASE_URL}${filmData?.poster_path}`} alt={`Póster de ${filmData?.title}`}/>
+                <div className='filmDetailCard'>
+                    <h1 className='mainHeader'>{filmData?.title}</h1>
+                    <p className='tagline'>{filmData?.tagline}</p>
+                    <p><span className='infoTag'> estreno: </span>{filmData?.release_date}</p>
+                    <p>{/* {filmData?.genres} */}</p>
+                    <p><span className='infoTag'> resumen: </span>{filmData?.overview}</p>
+                    <p className='average'>{filmData?.vote_average} / 10</p>
+                    <a className='toTMDb' href={`${TMDB_URL}${id}`} target='_blank' rel='noreferrer'>
+                        ver en <img className='buttonToTMDb' src={LOGO_TMBD_BOTON_URL} alt='logo TMDb'/>
+                    </a>
+                </div>
+            </div>
+        </>
     )
 }
