@@ -15,7 +15,7 @@ function App() {
       <BrowserRouter>
 
         <nav className="navbar navbar-dark bg-dark nav-fill">
-          {/* <NavLink to='/'>Ir a inicio</NavLink> */}
+          {/* <NavLink exact to='/'>Ir a inicio</NavLink> */}
           <NavLink to='/ejercicio1' className="nav-item nav-link" activeClassName="selected">Ejercicio 1</NavLink>
           <NavLink to='/ejercicio2'className="nav-item nav-link" activeClassName="selected">Ejercicio 2</NavLink>
           <NavLink to='/ejercicio3'className="nav-item nav-link" activeClassName="selected">Ejercicio 3</NavLink>
