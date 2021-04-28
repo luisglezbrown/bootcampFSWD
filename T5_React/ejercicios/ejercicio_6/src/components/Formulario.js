@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+import { useState, useContext } from 'react';
+import { GlobalContext } from "../App";
 
-export default function Formulario({ setContactos }) {
+export default function Formulario() {
+
+    const {setContactos} = useContext(GlobalContext);
 
     const [nombre, setNombre] = useState('');
     const [apellidos, setApellidos] = useState('');

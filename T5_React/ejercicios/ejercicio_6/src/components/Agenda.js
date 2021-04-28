@@ -1,6 +1,10 @@
-import React from 'react'
+import React from 'react';
+import { useContext } from "react";
+import { GlobalContext } from "../App";
 
-export default function Agenda({setContactos, contactos}) {
+export default function Agenda() {
+
+    const {contactos, setContactos} = useContext(GlobalContext);
 
     function deleteContacto(evento) {
         setContactos(currentContactos => currentContactos.filter(contacto => contacto.telefono !== evento.target.id))

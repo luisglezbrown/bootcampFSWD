@@ -1,6 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react';
+import { GlobalContext } from "../App";
 
-export default function NewToDoInput({toDoList, setToDoList}) {
+export default function NewToDoInput() {
+
+  const {toDoList, setToDoList} = useContext(GlobalContext);
 
   const [title, setTitle] = useState('');
 

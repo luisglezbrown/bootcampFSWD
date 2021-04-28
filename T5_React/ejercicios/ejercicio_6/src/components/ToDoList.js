@@ -1,7 +1,10 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import './ToDoList.css'
+import { GlobalContext } from "../App";
 
-export default function ToDoList({toDoList, setToDoList}) {
+export default function ToDoList() {
+
+    const {toDoList, setToDoList} = useContext(GlobalContext);
 
     const completedToggle = (evento, index) => {
         if (evento.target.tagName !== 'BUTTON'){
