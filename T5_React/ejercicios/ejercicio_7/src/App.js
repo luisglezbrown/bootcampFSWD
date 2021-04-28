@@ -7,7 +7,6 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className=''>Próximos estrenos</h1>
       <Router />
       <Footer />
     </div>

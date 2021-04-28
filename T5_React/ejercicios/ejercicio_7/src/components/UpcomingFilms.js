@@ -18,23 +18,25 @@ export default function UpcomingFilms() {
     }
 
     return (
-           
-        <div className='upcomingFilmsContainer'>
-            {upcomingFilmsList.map(({poster_path, title, overview, release_date, id}) => {
+        <>
+            <h1 className='mainHeader'>Próximos estrenos</h1>
+            <div className='upcomingFilmsContainer'>
 
-                const shortenOverview = `${overview.split('. ', 1).join(' ')} [...]`;
+                {upcomingFilmsList.map(({poster_path, title, overview, release_date, id}) => {
 
-                return   (
-                <div className="filmCard">
-                    <img src={`${POSTER_BASE_URL}${poster_path}`} alt=""/>
-                    <h2 className="title">{title}</h2>
-                    <p>Descripción: {overview.length > overviewMaxCharacters ? shortenOverview  : overview}</p>
-                    <p>Fecha de estreno: {release_date}</p>
-                    <button type="button" className="seeMoreButton" id={id} onClick={handleClick}>Ver más</button>
-                    
-                </div>)
-            })}            
-        </div>
-        
+                    const shortenOverview = `${overview.split('. ', 1).join(' ')} [...]`;
+
+                    return   (
+                    <div className="filmCard">
+                        <img className='posterImg' src={`${POSTER_BASE_URL}${poster_path}`} alt={`Póster de ${title}`}/>
+                        <h2 className="title">{title}</h2>
+                        <p>Descripción: {overview.length > overviewMaxCharacters ? shortenOverview  : overview}</p>
+                        <p>Fecha de estreno: {release_date}</p>
+                        <button type="button" className="seeMoreButton" id={id} onClick={handleClick}>Ver más</button>
+                        
+                    </div>)
+                })}            
+            </div>
+        </>    
     )
 }
