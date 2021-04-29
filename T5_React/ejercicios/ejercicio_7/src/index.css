@@ -129,6 +129,14 @@ code {
   text-transform: uppercase;
 }
 
+.filmDetailCard .genre {
+  background-color: teal;
+  color: whitesmoke;
+  margin: 0 0.5rem;
+  padding: 0 1rem;
+  border-radius: 1rem;
+}
+
 .filmDetailCard .average {
   font-weight: 700;
   font-size: 3rem;

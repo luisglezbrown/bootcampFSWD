@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react'
 import { useHistory } from "react-router-dom";
-
 import { overviewMaxCharacters, POSTER_BASE_URL, UPCOMING_URL } from '../Settings';
 
 export default function UpcomingFilms() {
 
     const [upcomingFilmsList, setUpcomingFilmsList] = useState([])
     useEffect(() => {
-      fetch(UPCOMING_URL)
+      fetch(`${UPCOMING_URL}&page=`)
       .then(response => response.json())
       .then(data => setUpcomingFilmsList(data.results))
     }, [])
