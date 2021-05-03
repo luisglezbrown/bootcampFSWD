@@ -1,0 +1,9 @@
+.resultsContainer {
+    margin-top: 0;
+    background-color: #0d253f;
+    padding: 1rem;
+}
+
+.resultsContainer .mainHeader {
+    color: #90cea1;
+}

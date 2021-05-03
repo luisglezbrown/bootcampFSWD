@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react'
-import { useHistory } from "react-router-dom";
-import { overviewMaxCharacters, POSTER_BASE_URL, UPCOMING_URL } from '../Settings';
+import { useState, useEffect } from 'react';
+import { UPCOMING_URL } from '../Settings';
+import FilmCard from './FilmCard';
 
 export default function UpcomingFilms() {
 
@@ -8,31 +8,16 @@ export default function UpcomingFilms() {
     useEffect(() => {
       fetch(`${UPCOMING_URL}&page=`)
       .then(response => response.json())
-      .then(data => setUpcomingFilmsList(data.results))
+      .then(data => setUpcomingFilmsList(data))
     }, [])
-
-    const history = useHistory();
-    function handleClick(event) {
-        history.push(`/film/${event.target.id}`);
-    }
 
     return (
         <>
-            <h1 className='mainHeader'>Próximos estrenos</h1>
-            <div className='upcomingFilmsContainer'>
-                {upcomingFilmsList.map(({poster_path, title, overview, release_date, id}) => {
-
-                    const shortenOverview = `${overview.split('. ', 1).join(' ')} [...]`;
-
-                    return   (
-                    <div className="filmCard" key={id}>
-                        <img className='posterImg' src={`${POSTER_BASE_URL}${poster_path}`} alt={`Póster de ${title}`}/>
-                        <h2 className="title">{title}</h2>
-                        <p><span className='infoTag'>Descripción: </span> {overview.length > overviewMaxCharacters ? shortenOverview  : overview}</p>
-                        <p><span className='infoTag'>estreno: </span> {release_date}</p>
-                        <button type="button" className="seeMoreButton" id={id} onClick={handleClick}>+</button>                        
-                    </div>)
-                })}            
+            <h1 className='mainHeader'>⇓ Próximos estrenos ⇓</h1>
+            <div className='upcomingFilmsContainer'>              
+                {upcomingFilmsList.results?.map((film) =>(
+                    <FilmCard film={film} key={film.id}/>
+                ))}
             </div>
         </>    
     )
