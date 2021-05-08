@@ -1,11 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, createContext } from 'react';
 import { useParams } from 'react-router';
 import { SEARCH_URL } from '../Settings';
-import FilmCard from './FilmCard';
-import Paginator from './Paginator';
-import ResultsHeader from './ResultsHeader';
 import NoResults from './NoResults';
+import OkResults from './OkResults';
 
+export const ResultsContext = createContext();
+export const PageContext = createContext();
+export const SetPageContext = createContext();
 
 export default function UpcomingFilms() {
 
@@ -21,18 +22,16 @@ export default function UpcomingFilms() {
 
     return (
     <>
-        {searchResults.total_results  
-        ?   <>
-                <ResultsHeader query={query} searchResults={searchResults}/>
-                <Paginator searchResults={searchResults} setPage={setPage} page={page} />
-                <div className='upcomingFilmsContainer'>              
-                    {searchResults.results?.map((film) =>(
-                    <FilmCard film={film} key={film.id}/>))}
-                </div>
-                <Paginator searchResults={searchResults} setPage={setPage} page={page} />
-            </>
-        : <NoResults />
-        }
-    </>
-    )
+        <ResultsContext.Provider value={ searchResults }>
+        <PageContext.Provider value={ page }>
+        <SetPageContext.Provider value={ setPage }>
+
+            {searchResults.total_results  
+            ?   <OkResults />
+            :   <NoResults />
+            }
+        </SetPageContext.Provider>
+        </PageContext.Provider>
+        </ResultsContext.Provider>
+    </>)
 }

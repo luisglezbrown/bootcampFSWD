@@ -17,7 +17,7 @@ export default function UpcomingFilms() {
     return (
         <>
             <h1 className='mainHeader'>⇓ Próximos estrenos ⇓</h1>
-            <div className='upcomingFilmsContainer'>              
+            <div className='FilmsContainer'>              
                 {upcomingFilmsList.results?.map((film) =>(
                     <FilmCard film={film} key={film.id}/>
                 ))}
