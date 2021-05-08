@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/bootcampFSWD/T5_React/ejercicios/ejercicio_7/static/css/main.6202c2f9.chunk.css",
-    "main.js": "/bootcampFSWD/T5_React/ejercicios/ejercicio_7/static/js/main.d14f8b41.chunk.js",
-    "main.js.map": "/bootcampFSWD/T5_React/ejercicios/ejercicio_7/static/js/main.d14f8b41.chunk.js.map",
-    "runtime-main.js": "/bootcampFSWD/T5_React/ejercicios/ejercicio_7/static/js/runtime-main.0a0f9a90.js",
-    "runtime-main.js.map": "/bootcampFSWD/T5_React/ejercicios/ejercicio_7/static/js/runtime-main.0a0f9a90.js.map",
-    "static/js/2.6a0fd65f.chunk.js": "/bootcampFSWD/T5_React/ejercicios/ejercicio_7/static/js/2.6a0fd65f.chunk.js",
-    "static/js/2.6a0fd65f.chunk.js.map": "/bootcampFSWD/T5_React/ejercicios/ejercicio_7/static/js/2.6a0fd65f.chunk.js.map",
-    "index.html": "/bootcampFSWD/T5_React/ejercicios/ejercicio_7/index.html",
-    "static/css/main.6202c2f9.chunk.css.map": "/bootcampFSWD/T5_React/ejercicios/ejercicio_7/static/css/main.6202c2f9.chunk.css.map",
-    "static/js/2.6a0fd65f.chunk.js.LICENSE.txt": "/bootcampFSWD/T5_React/ejercicios/ejercicio_7/static/js/2.6a0fd65f.chunk.js.LICENSE.txt"
+    "main.css": "/bootcampFSWD/static/css/main.6202c2f9.chunk.css",
+    "main.js": "/bootcampFSWD/static/js/main.d14f8b41.chunk.js",
+    "main.js.map": "/bootcampFSWD/static/js/main.d14f8b41.chunk.js.map",
+    "runtime-main.js": "/bootcampFSWD/static/js/runtime-main.24b6a4fe.js",
+    "runtime-main.js.map": "/bootcampFSWD/static/js/runtime-main.24b6a4fe.js.map",
+    "static/js/2.6a0fd65f.chunk.js": "/bootcampFSWD/static/js/2.6a0fd65f.chunk.js",
+    "static/js/2.6a0fd65f.chunk.js.map": "/bootcampFSWD/static/js/2.6a0fd65f.chunk.js.map",
+    "index.html": "/bootcampFSWD/index.html",
+    "static/css/main.6202c2f9.chunk.css.map": "/bootcampFSWD/static/css/main.6202c2f9.chunk.css.map",
+    "static/js/2.6a0fd65f.chunk.js.LICENSE.txt": "/bootcampFSWD/static/js/2.6a0fd65f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.0a0f9a90.js",
+    "static/js/runtime-main.24b6a4fe.js",
     "static/js/2.6a0fd65f.chunk.js",
     "static/css/main.6202c2f9.chunk.css",
     "static/js/main.d14f8b41.chunk.js"
