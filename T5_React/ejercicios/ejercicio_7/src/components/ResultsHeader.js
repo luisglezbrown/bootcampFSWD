@@ -6,11 +6,11 @@ import { ResultsContext } from "./SearchResults";
 
 export default function ResultsHeader() {
     const { query } = useParams();
-    const searchResults = useContext(ResultsContext)
+    const search = useContext(ResultsContext)
 
     return (
         <div className='resultsContainer'>
-            <h1 className='mainHeader'>Wooooooooooooooooow! 📽️ {searchResults.total_results} películas con '{query}':</h1>
+            <h1 className='mainHeader'>Wooooooooooooooooow! 📽️ {search.total_results} películas con '{query}':</h1>
         </div>
     )
 }
