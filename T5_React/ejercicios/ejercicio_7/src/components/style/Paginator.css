@@ -2,6 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center;
     width: 100%;
     text-align: center;
     margin: 0 auto;
@@ -13,14 +14,32 @@
     visibility: visible;
     color: white;
     background-color: #0d253f;
-    padding: 0.75rem 4rem;
-    font-size: 1.5rem;
+    padding: 0.3rem 3rem;
+    font-size: 1.2rem;
     border-radius: 1rem;
+    cursor: pointer;
+}
+
+.pageLink {
+    font-size: 1.2rem;
+    font-weight: 500;
+    background-color: #72a37f50 ;
+    color: #0d253f;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+
 }
 
 .paginatorBtn:hover {
     color: #0d253f;
     background-color: white;
+    font-weight: bold;
+}
+
+.pageLink:hover {
+    background-color: #72a37fab ;
+    
 }
 
 .hidden {
@@ -31,4 +50,10 @@
     font-size: 1.5rem;    
     font-weight: bold;
     color: #0d253f;
+}
+
+.active {
+    background-color: #0d253f;
+    color: white;
+    font-weight: bold;
 }

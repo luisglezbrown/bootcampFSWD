@@ -1,15 +1,18 @@
 import { useState, useEffect } from 'react';
 import { UPCOMING_URL } from '../Settings';
 import FilmCard from './FilmCard';
+import PaginatorUpcoming from './PaginatorUpcoming'
 
 export default function UpcomingFilms() {
 
-    const [upcomingFilmsList, setUpcomingFilmsList] = useState([])
+    const [page, setPage] = useState(1);
+    const [upcomingFilmsList, setUpcomingFilmsList] = useState([]);
+
     useEffect(() => {
-      fetch(`${UPCOMING_URL}&page=`)
+      fetch(`${UPCOMING_URL}&page=${page}`)
       .then(response => response.json())
       .then(data => setUpcomingFilmsList(data))
-    }, [])
+    }, [page])
 
     return (
         <>
@@ -19,6 +22,7 @@ export default function UpcomingFilms() {
                     <FilmCard film={film} key={film.id}/>
                 ))}
             </div>
+            <PaginatorUpcoming upcomingFilmsList={upcomingFilmsList} page={page} setPage={setPage}/>
         </>    
     )
 }

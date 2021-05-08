@@ -1,4 +1,4 @@
-.filmFinderContainer {
+.FinderBannerContainer {
     width: 100%;
     background-image: url("https://www.dejavumodels.com/wp-content/uploads/2021/02/banner-cine-1.jpg");
     background-position: center;
@@ -8,18 +8,23 @@
     text-align: center;
 }
 
-.filmFinderContainer > h2 {
+.FinderBannerContainer > h2 {
     font-family: 'Voltaire', sans-serif;
     font-size: 3rem;
     color: #90cea1;
     text-shadow: 1px 1px 1px rgb(71, 62, 62);
 }
 
-.filmFinderContainer > input {
+.FinderBannerContainer > input {
     width: 35%;
     border-radius: 100px;
     font-size: 1rem;
     padding: 0.5rem 2rem;
     font-family: 'Palanquin', sans-serif;
-    border: 5px solid #90cea1;
+    border: 7px outset #90cea1;
+}
+
+.FinderBannerContainer > input:focus {
+    border: #90cea1 inset 7px;
+    outline: none;
 }
