@@ -10,7 +10,7 @@ export default function FilmCard({ film }) {
         history.push(`/film/${event.target.id}`);
     }
 
-    const shortenOverview = `${film.overview.split('. ', 1).join(' ')} [...]`;
+    const shortenOverview = `${film.overview.split(' ', 30).join(' ')} [...]`;
 
     return   (
     <div className="filmCard">
