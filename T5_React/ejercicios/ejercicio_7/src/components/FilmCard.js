@@ -19,7 +19,7 @@ export default function FilmCard({ film }) {
             : posterPlaceholder
         }
         <h2 className="title">{film.title}</h2>
-        <p><span className='infoTag'>estreno: </span> {film.release_date}</p>
+        <p><span className='infoTag'>estreno: </span> {film.release_date.split('-').reverse().join('-')}</p>
         <p><span className='infoTag'>Descripción: </span> {film.overview.length > overviewMaxCharacters ? shortenOverview  : film.overview}</p>
         <button type="button" className="seeMoreButton" id={film.id} onClick={handleClick}>🔎</button>                        
     </div>
