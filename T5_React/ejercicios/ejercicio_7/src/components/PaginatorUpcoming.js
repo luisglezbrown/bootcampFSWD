@@ -9,22 +9,22 @@ export default function PaginatorUpcoming({upcomingFilmsList, page, setPage}) {
     
     return (
         <nav className='paginatorContainer'>
-            <a  onClick={() => setPage(page-1)} href
+            <p  onClick={() => setPage(page-1)}
                 className={`paginatorBtn ${upcomingFilmsList.page <= 1 && 'hidden'}`}>
                     Anterior
-            </a>
+            </p>
 
             {pagesArray.map((currentPage) =>(
-                <a key={currentPage} href
+                <p key={currentPage} href
                 onClick={() => setPage(currentPage)}
                 className={`pageLink ${currentPage === page && 'active'}`}>
-                    {currentPage}</a>
+                    {currentPage}</p>
             ))}       
 
-            <a  onClick={() => setPage(page+1)} href
+            <p  onClick={() => setPage(page+1)}
                 className={`paginatorBtn ${upcomingFilmsList.page >= upcomingFilmsList.total_pages && 'hidden'}`}>
                     Siguiente
-            </a>
+            </p>
         </nav>
     )
 }
