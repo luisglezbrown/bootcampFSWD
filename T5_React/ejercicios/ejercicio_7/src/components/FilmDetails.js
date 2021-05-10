@@ -22,7 +22,7 @@ export default function FilmDetails() {
             <div className='filmDetailCard'>
                 <h1 className='mainHeader'>{filmData?.title}</h1>
                 <p className='tagline'>{filmData?.tagline}</p>
-                <p><span className='infoTag'> estreno: </span>{filmData?.release_date.split('-').reverse().join('-')}</p>
+                <p><span className='infoTag'> estreno: </span>{filmData?.release_date}</p> {/* filmData?.release_date.split('-').reverse().join('-') */}
                 <p><span className='infoTag'> género: </span>{filmData.genres?.map(genre => (<span className='genre' key={genre.id}>{genre.name} </span>))}</p>
                 <p><span className='infoTag'> resumen: </span>{filmData?.overview}</p>
                 <p className='average'>{filmData?.vote_average} / 10</p>
