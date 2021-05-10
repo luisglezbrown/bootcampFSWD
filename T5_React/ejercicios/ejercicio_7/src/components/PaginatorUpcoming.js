@@ -15,7 +15,7 @@ export default function PaginatorUpcoming({upcomingFilmsList, page, setPage}) {
             </p>
 
             {pagesArray.map((currentPage) =>(
-                <p key={currentPage} href
+                <p key={currentPage}
                 onClick={() => setPage(currentPage)}
                 className={`pageLink ${currentPage === page && 'active'}`}>
                     {currentPage}</p>
