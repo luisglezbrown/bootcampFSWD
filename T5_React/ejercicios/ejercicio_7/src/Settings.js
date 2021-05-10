@@ -1,4 +1,4 @@
-const UPCOMING_URL ='https://api.themoviedb.org/3/movie/upcoming?api_key=425ecbdbe0eebe8e205eb7f6d8511b92&language=es&page=';
+const UPCOMING_URL ='https://api.themoviedb.org/3/movie/upcoming?api_key=425ecbdbe0eebe8e205eb7f6d8511b92&language=es';
 const SEARCH_URL = 'https://api.themoviedb.org/3/search/movie?api_key=425ecbdbe0eebe8e205eb7f6d8511b92&language=es&query=';
 const POSTER_BASE_URL = 'https://image.tmdb.org/t/p/w500';
 const POSTER_PLACEHOLDER_URL = 'https://yify-torrent.net/img/default_thumbnail.svg';

@@ -24,7 +24,7 @@ code {
 
 /* ----- UpcomingFilms ----- */
 
-.upcomingFilmsContainer {
+.FilmsContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;

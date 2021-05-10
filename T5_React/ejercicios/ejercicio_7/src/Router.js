@@ -10,7 +10,7 @@ export default function Router() {
             <Switch>
                 <Route exact path='/' component={Index}/>
                 <Route path='/film/:id' component={Film}/>
-                <Route path='/results/:search' component={Results}/>
+                <Route path='/results/:query' component={Results}/>
                 {/* <Route component={Error}/> */}
             </Switch>
         </BrowserRouter>
