@@ -8,6 +8,11 @@ app.get("/", (req, res) => {
     res.json({message: "Petición GET recibido correctamente"});
 });
 
+app.get("/:id", (req, res) => {
+    let id = req.params.id;
+    res.json({message: `Petición GET con parámetro: ${id}`})
+});
+
 app.post("/", (req, res) => {
     let body = req.body;
     console.log(body.username + ' vive en la calle ' + body.address.street);
