@@ -1,33 +1,33 @@
+require("./config/config");
 const express = require("express");
 
 // 1.Usaremos la librería de express()
 const app = express();
 
-// 2.Nuestro server escuchará en el puerto 3000.
-const port = 3000;
+let users = [];
 
 app.use(express.json());
 
 // 3.Endpoint GET de un usuario. Devolverá un objeto JSON
-app.get("/user", (req, res) => {
-    res.json(
-        {
-            id: 2,
-            email: "janet.weaver@reqres.in",
-            first_name: "Janet",
-            last_name: "Weaver",
-            avatar: "https://reqres.in/img/faces/2-image.jpg",
-            info: "Esta es la respuesta del método GET"
-        });
+app.get("/users", (req, res) => {
+    const user = {
+        id: 2,
+        email: "janet.weaver@reqres.in",
+        first_name: "Janet",
+        last_name: "Weaver",
+        avatar: "https://reqres.in/img/faces/2-image.jpg",
+    }
+    
+    res.json({ok: true, results: users});
 });
 
 
 // 4.Endpoint PUT de un usuario al que le pasaremos la ID del usuario que queremos actualizar. Devolveremos en un objeto JSON su id
-app.put("/user/:id", (req, res) => {
-    let body = req.body;
+app.put("/users/:id", (req, res) => {
+    const id = req.params.id;
     res.json(
         {
-            id: body.id,
+            id: id,
             info: "Esta es la respuesta del método PUT"
         });
 
@@ -36,13 +36,11 @@ app.put("/user/:id", (req, res) => {
 
 // 5.Endpoint DELETE de un usuario. Devolverá un objeto JSON.
 
-app.delete("/user/:id", (req, res) => {
-    let body = req.body;
-    res.json(
-        {
-            body,
-            info: "El usuario anterior ha sido eliminado con el método DELETE"
-        });
+app.delete("/users/:id", (req, res) => {
+    const id = req.params.id;
+    const removedUser = users.splice(id, 1);
+
+    res.status(200).json({removedUser});
 
 });
 
@@ -51,13 +49,12 @@ app.delete("/user/:id", (req, res) => {
 Si el campo nombre no está definido, devolveremos un código de error HTTP 400, donde indicaremos que el nombre es requerido. 
 Devolveremos la información proporcionada en la petición POST en un objeto user. */
 
-app.post("/user", (req, res) => {
-    let body = req.body;
+app.post("/users", (req, res) => {
+    const body = req.body;
 
     if(body.name) {
-        res.json(
-            body
-        )
+        users.push(body)
+        res.status(201).json({user: body});
     } else {
         res.status(400).json(
             {
@@ -69,7 +66,7 @@ app.post("/user", (req, res) => {
 
 });
 
-app.listen(port);
+app.listen(process.env.PORT);
 
 
 /* Objeto de prueba para el Body de la petición en Thunder
