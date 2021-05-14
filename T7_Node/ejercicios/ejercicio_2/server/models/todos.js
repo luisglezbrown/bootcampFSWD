@@ -22,6 +22,6 @@ todoSchema.plugin(uniqueValidator, {message: "{PATH} should be unique"})
 module.exports = mongoose.model("Todo", todoSchema);
 
 
-/* title:únicoyobligatorio.
-•completed: pordefectoseráfalseyrepresentarásilatareaestáhecha.
+/* title:único y obligatorio.
+•completed: por defecto será false y representará si la tarea está hecha.
 •active: por defecto será true y controlará si la tarea ha sido borrada. */

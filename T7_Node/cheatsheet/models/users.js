@@ -33,5 +33,17 @@ let userSchema = new Schema({
 });
 
 
+//Este método se utiliza para eliminar cualquier campo
+//del objeto devuelto.
+userSchema.methods.toJSON = function() {
+    const user = this;
+
+    const userObject = user.toObject();
+
+    delete userObject.password;
+
+    return userObject;
+}
+
 userSchema.plugin(uniqueValidator, {message: "{PATH} should be unique"})
 module.exports = mongoose.model("User", userSchema);
