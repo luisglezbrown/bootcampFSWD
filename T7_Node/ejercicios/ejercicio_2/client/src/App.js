@@ -18,8 +18,8 @@ function App() {
   return (
     <div className="App container">
       <h1 className='my-3'>Todo List</h1>
-      <NewToDoInput toDoList={toDoList} setToDoList={setToDoList} />
-      <ToDoList toDoList={toDoList} setToDoList={setToDoList} />
+      <NewToDoInput />
+      <ToDoList toDoList={toDoList} />
     </div>
   );
 }

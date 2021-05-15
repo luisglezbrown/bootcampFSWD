@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export default function NewToDoInput({toDoList, setToDoList}) {
+export default function NewToDoInput() {
 
   const [title, setTitle] = useState('');
 
