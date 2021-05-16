@@ -1,16 +1,15 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
+import { API_URL } from "../settings";
 
 export default function NewToDoInput() {
 
   const [title, setTitle] = useState('');
 
-  const handleTitle = evento => setTitle(evento.target.value);
+  const handleTitle = event => setTitle(event.target.value);
 
-  function submit (evento) {
-    evento.preventDefault();
-    const API = 'http://localhost:3002/todos';
-
-    fetch(API, {
+  function submit (event) {
+    event.preventDefault();
+    fetch(API_URL, {
       method: "POST",
       body: JSON.stringify({"title": title}),
       headers: {"Content-type": "application/json; charset=UTF-8"}

@@ -37,10 +37,10 @@ router.put("/:id", (req, res) => {
     const body = ramda.pick(["completed"], req.body);
 
     Todo.findByIdAndUpdate(
-        id, //El _id de mongo
+        id,
         body,
-        {new: true, runValidators: true, context: "query"}, //Options
-        (error, updatedTodo) => { //Función Callback
+        {new: true, runValidators: true, context: "query"},
+        (error, updatedTodo) => {
             if(error) {
                 res.status(400).json({ok: false, error})
             } else {
@@ -54,10 +54,10 @@ router.delete("/:id", (req, res) => {
     const id = req.params.id;
 
     Todo.findByIdAndUpdate(
-        id, //El _id de mongo
+        id,
         {active: false},
-        {new: true, runValidators: true, context: "query"}, //Options
-        (error, updatedTodo) => { //Función Callback
+        {new: true, runValidators: true, context: "query"},
+        (error, updatedTodo) => {
             if(error) {
                 res.status(400).json({ok: false, error})
             } else if(!updatedTodo) {
