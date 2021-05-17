@@ -3,12 +3,25 @@ const ramda = require("ramda");
 const router = express.Router();
 const bcrypt = require("bcrypt");
 
-const User = require("../models/users")
+const User = require("../models/users");
+const verifyToken = require("../middlewares/auth")
 
-router.get("/", (req, res) => {
+const middleware1 = (req, res, next) => {
+    console.log("Hola desde el middleware1");
+    next();
+}
+
+const middleware2 = (req, res, next) => {
+    console.log("Hola desde el middleware2");
+    next();
+}
+
+router.get("/", verifyToken, async (req, res) => {
     //Como el find de Mongo, el filtro vacío devuelve todo!
     const PAGE_SIZE = 2;
     const page = req.query.page || 1;
+
+    const count = await User.count();
 
     User.find({})
     .skip((page - 1) * PAGE_SIZE) //Nº de documentos que saltará
@@ -17,7 +30,7 @@ router.get("/", (req, res) => {
         if(error) {
             res.status(400).json({ok: false, error})
         } else {
-            res.status(201).json({ok: true, lo_que_encuentre})
+            res.status(201).json({ok: true, count, results: lo_que_encuentre})
         }
     })
 });
