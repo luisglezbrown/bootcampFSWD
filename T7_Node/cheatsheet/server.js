@@ -5,16 +5,10 @@ const mongoose = require("mongoose");
 const express = require("express");
 const app = express();
 
-const users = require("./routes/users")
-const login = require("./routes/login")
-
 //Antes de los endoints, usamos los middlewares
 app.use(express.json());
 
-//El primer argumento define el sufijo que vamos a poner
-//El segundo importa el módulo del router
-app.use("/users", users);
-app.use("/login", login);
+app.use(require("./routes/index"));
 
 mongoose.connect("mongodb://localhost:27017/users", {
     useNewUrlParser: true,
