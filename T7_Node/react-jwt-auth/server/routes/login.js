@@ -21,7 +21,7 @@ router.post("/", (req, res) => {
                 process.env.SEED, //la semilla, es un string que va a servir de contraseña
                 {expiresIn: 20} //El tiempo de validez del token
             );
-
+            console.log(userDB.username, "has logged in!");
             res.status(200).json({ok: true, token, user: userDB});
         }
     })
